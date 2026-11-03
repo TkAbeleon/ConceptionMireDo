@@ -37,6 +37,14 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Précision :** cette référence est implicite dans l'écriture. Sa correspondance avec une hauteur absolue reste à déterminer dans le contexte musical.
 - **Statut :** validé.
 
+## 2026-11-03 — Désignation de la tonalité
+
+- **Décision :** désigner la tonalité avec les lettres latines usuelles `A B C D E F G`.
+- **Décision :** les altérations de tonalité peuvent être indiquées avec `b` (bémol) ou `#` (dièse).
+- **Préférence par défaut :** privilégier le bémol (`b`) lorsqu'un choix d'altération est nécessaire.
+- **Exemple :** en tonalité `Ab`, le degré Sol-fa `d` (Do) correspond à La bémol.
+- **Statut :** principe et exemple validés ; portée exacte de `b` et `#` dans l'écriture des notes Sol-fa à clarifier séparément.
+
 ## 2026-11-03 — Référence tonale et mode mineur
 
 - **Décision :** l'interprétation dépend du contexte tonal déclaré dans la partition ; aucun encodage unique du mineur ne doit être imposé.
