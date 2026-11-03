@@ -1,50 +1,114 @@
 # Rythme et durée — Tonic Sol-fa
 
-Cette page formalise les règles rythmiques décrites pour MireDo. Le périmètre actuel porte sur les unités de temps entières ; les subdivisions inférieures au temps et les divisions irrégulières restent à définir.
+Cette page consigne les règles rythmiques établies pour MireDo à partir de la notation Tonic Sol-fa décrite. Elle distingue les conventions déjà définies, les interprétations retenues pour la saisie et les limites de la notation Sol-fa.
 
-## Délimitation des mesures : `|`
+## 1. Structure de la mesure et unités principales
 
-Le symbole `|` marque le début et la fin d'une mesure. Une mesure complète occupée par une seule note correspond à une ronde lorsque la mesure compte quatre temps (4/4).
+### Délimitation des mesures : `|`
 
-## Division de la mesure : `!`
+Le symbole `|` marque le début et la fin d'une mesure.
 
-Le symbole `!` sépare les deux moitiés égales d'une mesure lorsque cette division est possible. Il est uniquement structurel : il ne représente ni une note, ni une durée, ni un accent.
+### Division de la mesure : `!`
+
+Le symbole `!` sépare les deux moitiés égales d'une mesure lorsque cette division est possible. Il est structurel : il ne représente ni une note, ni une durée, ni un accent.
+
+- En 4/4, il sépare deux groupes de deux temps.
+- En 6/4, il sépare deux groupes de trois temps.
+- En 5/4 et 7/4, il n'y a pas de séparation en deux moitiés égales : on utilise directement les séparateurs `:`, sans `!`.
+
+### Séparation des unités : `:`
+
+Le symbole `:` sépare les unités correspondant aux temps principaux. Leur nombre dépend de la signature temporelle.
 
 Exemples :
-- En 4/4, `!` sépare deux groupes de deux temps.
-- En 6/4, `!` sépare deux groupes de trois temps.
-- Pour des mesures comme 5/4 ou 7/4, qui ne se divisent pas en deux moitiés égales, on utilise directement les séparateurs `:` sans ajouter `!`.
+- `|s:s:s|` en 3/4 : trois unités d'un temps.
+- `|s:s!s:s|` en 4/4 : quatre unités d'un temps.
+- `|s:s:s!s:s:s|` en 6/4 : six unités d'un temps.
+- En 5/4 et 7/4, les unités sont séparées directement par `:`.
 
-## Séparation des temps : `:`
+## 2. Subdivisions à l'intérieur d'une unité
 
-Le symbole `:` sépare les unités correspondant aux temps. Leur nombre dépend de la signature temporelle.
+Les symboles de subdivision s'appliquent à l'intérieur d'une unité délimitée par `:`.
+
+### Division binaire : `.`
+
+Le point divise une unité en deux parties égales. La subdivision peut être répétée pour obtenir des parts plus petites :
+
+- `.` : division en deux, soit deux parts de 1/2 unité.
+- `..` : division en quatre, soit quatre parts de 1/4 unité.
+
+La durée d'une note qui n'est suivie d'aucun signe de prolongation est déterminée par la place qu'elle occupe dans la subdivision. Elle n'est pas automatiquement égale à une unité entière : ce n'est pas le séparateur `:` à lui seul qui fixe sa durée.
+
+Exemple confirmé :
+- `|d.:::|` : la note `d` occupe la première moitié de l'unité (une croche si l'unité vaut un temps de noire) ; les subdivisions restantes sont silencieuses. Le résultat est une croche suivie d'un silence de croche.
+
+### Plusieurs notes dans une même unité
+
+Lorsque plusieurs notes sont écrites directement dans une unité, sans séparateur entre elles, la durée de cette unité est répartie également entre ces notes.
+
+Exemples de principe :
+- `:dd:` : deux notes se partagent l'unité en deux parts égales.
+- `:ddd:` : trois notes se partagent l'unité en trois parts égales.
+- `:dddd:` : quatre notes se partagent l'unité en quatre parts égales.
+- `:dddddd:` : six notes se partagent l'unité en six parts égales.
+
+Cette règle de lecture compacte est retenue pour MireDo. Elle ne signifie pas que la notation Sol-fa traditionnelle définit une règle générale pour toute division possible.
+
+### Triolets et sextolets
+
+Les écritures avec séparateurs peuvent être utilisées, par exemple :
+- Triolet : `:d.d.d:`.
+- Sextolet : `:,,.,,:` (notation fournie comme exemple par l'utilisateur).
+
+Ces écritures peuvent être visuellement lourdes. Pour le rendu de la partition, un groupe peut être présenté sans séparateurs entre les notes et identifié par une courbe au-dessus, comme dans la notation musicale usuelle. La forme de rendu n'est pas nécessairement la syntaxe de saisie ni la structure interne.
+
+## 3. Prolongation : `-`
+
+Le symbole `-` prolonge la note qui le précède. La note continue de sonner pendant la durée couverte par la prolongation.
+
+- Une prolongation doit obligatoirement être précédée d'une note.
+- La durée ajoutée dépend de l'unité ou de la subdivision occupée par le signe de prolongation.
+- La prolongation peut traverser `!` et une ou plusieurs barres de mesure.
+- Une nouvelle note met fin à la prolongation précédente et commence sa propre durée.
+- Un signe `-` sans note précédente à prolonger est invalide.
+
+Exemples déjà décrits pour les unités principales :
+- `|d:-! :|` : Do est prolongé sur l'unité suivante.
+- `|d:-!-:|` : Do est prolongé sur deux unités supplémentaires selon le découpage écrit.
+
+Exemple de subdivision fourni :
+- `|d:-!-.:|` : la durée de Do comprend deux unités, puis une demi-unité supplémentaire.
+
+## 4. Silences implicites
+
+Aucun symbole autonome de silence n'a été défini dans la convention décrite.
+
+Une subdivision ou une partie d'unité qui ne contient ni note ni signe de prolongation est silencieuse. Il faut distinguer :
+- une note : le son commence ;
+- un signe `-` : le son de la note précédente continue ;
+- une partie vide : silence.
 
 Exemples :
-- `|s:s:s|` en 3/4 : trois noires.
-- `|s:s!s:s|` en 4/4 : quatre noires.
-- `|s:s:s!s:s:s|` en 6/4 : six noires.
-- En 5/4 et 7/4, les cinq ou sept unités sont séparées directement par `:`.
+- `|.d::|` : début de l'unité silencieux, puis note sur la seconde moitié ; l'utilisateur décrit cette figure comme un contretemps.
+- `|d,.d:|` : exemple fourni pour une note, des subdivisions silencieuses, puis une autre note ; son découpage exact reste à confirmer.
 
-## Prolongation : `-`
+## 5. Limites de la notation Sol-fa
 
-Le symbole `-` prolonge obligatoirement une note qui le précède. Chaque tiret ajoute une unité de temps à la durée de cette note. La prolongation peut continuer sur autant d'unités que nécessaire, traverser `!` et se poursuivre sur les mesures suivantes. Une nouvelle note met fin à la prolongation précédente et commence sa propre durée. Un tiret sans note précédente à prolonger est invalide.
+La notation décrite fournit des conventions pour :
+- les unités principales ;
+- les divisions binaires en deux et en quatre ;
+- certains groupes rythmiques usuels, notamment les triolets et les sextolets.
 
-Exemples en 4/4 :
-- `|d:! :|` : Do noire, un temps.
-- `|d:-! :|` : Do blanche, deux temps.
-- `|d:-!-:|` : Do blanche pointée, trois temps.
-- `|d:-!-:-|` : Do ronde, quatre temps.
+Elle ne définit pas de règle générale pour toutes les divisions possibles au-delà de ces conventions. MireDo ne doit donc pas inventer une convention Sol-fa traditionnelle inexistante ni présenter une extension propre à MireDo comme une règle universelle de la notation Sol-fa.
 
-Une prolongation peut traverser une barre de mesure : les tirets continuent alors la note initiale dans la mesure suivante.
+Pour les divisions non spécifiées, la syntaxe et le rendu restent à décider explicitement.
 
-## Silences implicites
+## 6. Questions ouvertes
 
-La convention décrite ne possède pas de symbole spécifique pour les silences. Une unité sans note et sans tiret correspond à un silence. Une note commence un son ; un tiret prolonge la note précédente ; une unité vide est silencieuse.
+Les points suivants ne sont pas encore suffisamment déterminés pour être considérés comme des règles validées :
 
-Exemples en 4/4 :
-- `|r:-!-:|` : Ré pendant trois temps, puis un silence d'un temps.
-- `|d:-!r:|` : Do pendant deux temps, Ré pendant un temps, puis un silence d'un temps. La nouvelle note Ré met fin à la prolongation de Do.
+- La syntaxe exacte des silences dans toutes les subdivisions, notamment la lecture complète de `|d,.d:|`.
+- La lecture précise de certains exemples de prolongation ou de silence à l'intérieur d'un triolet, notamment `|d.-.d:|`, `:d-d:` et `:d..d:`.
+- La convention de saisie et de rendu des divisions qui ne sont pas définies par la notation Sol-fa.
 
-## Périmètre non encore défini
-
-Les demi-temps, subdivisions inférieures au temps, triolets et autres divisions irrégulières ne sont pas traités ici. Ils feront l'objet d'une définition ultérieure.
+Les exemples encore ouverts ne doivent pas être utilisés pour déduire automatiquement une règle générale.
