@@ -33,8 +33,9 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 
 - **Décision :** les exemples `d1`, `d2`, `d_1`, `s_2`, `di_1` et `di1` expriment respectivement les déplacements d'octave indiqués dans la note dédiée.
 - **Décision :** appliquer aussi cette syntaxe aux syllabes altérées.
-- **Point non résolu :** la référence exacte à partir de laquelle le déplacement est compté reste à définir. Ne pas déduire ni imposer cette référence.
-- **Statut :** formes et sens du déplacement validés ; référence à préciser.
+- **Décision :** une note sans suffixe (ex. `d`) se trouve dans l'octave de référence ; `d1` indique un déplacement d'une octave vers l'aigu, `d2` de deux octaves vers l'aigu et `d_1` d'une octave vers le grave.
+- **Précision :** cette référence est implicite dans l'écriture. Sa correspondance avec une hauteur absolue reste à déterminer dans le contexte musical.
+- **Statut :** validé.
 
 ## 2026-11-03 — Référence tonale et mode mineur
 
