@@ -2,16 +2,17 @@
 
 ## État
 
-<badge color="success">Validé</badge> Utilisation de suffixes numériques pour exprimer le déplacement d'octave dans la notation numérique de MireDo.
+<badge color="success">Validé</badge> Utilisation de suffixes numériques pour exprimer le déplacement d'octave dans la notation numérique de MireDo. L'absence de suffixe désigne la note dans l'octave de référence.
 
-<badge color="warning">À préciser</badge> Référence exacte à partir de laquelle le déplacement est compté, règles complètes de validation, limites numériques et convention exacte de rendu.
+<badge color="warning">À préciser</badge> Règles complètes de validation, limites numériques et convention exacte de rendu.
 
-## Convention numérique établie
+## Convention numérique
 
-Les formes suivantes ont été données et validées comme exemples de notation :
+Une note sans suffixe est écrite dans l'octave de référence. Les suffixes indiquent le déplacement par rapport à cette octave :
 
-| Écriture numérique | Sens établi |
+| Écriture numérique | Interprétation |
 |---|---|
+| `d` | `d` dans l'octave de référence |
 | `d1` | `d` une octave plus haut |
 | `r1` | `r` une octave plus haut |
 | `m2` | `m` deux octaves plus haut |
@@ -22,7 +23,7 @@ Les formes suivantes ont été données et validées comme exemples de notation 
 
 Le nombre exprime un déplacement en octaves ; le suffixe positif indique le sens aigu et le nombre précédé d'un soulignement indique le sens grave.
 
-**Point non encore établi :** l'octave ou la hauteur de référence par rapport à laquelle ce déplacement est calculé. Ne pas supposer que l'absence de suffixe définit à elle seule une octave de référence précise. La question doit être clarifiée avec des exemples concrets avant de spécifier le modèle ou le calcul.
+**Précision :** l'octave de référence est désignée implicitement par l'absence de suffixe. Sa hauteur absolue dépendra du contexte nécessaire à l'interprétation musicale ; elle n'est pas encore fixée ici par un numéro d'octave MIDI ou une fréquence.
 
 ## Rendu typographique souhaité
 
@@ -49,8 +50,8 @@ Une note comme `ti_1` peut produire une hauteur équivalente à un `d` situé da
 
 ## Questions ouvertes
 
-- Quelle est la référence exacte utilisée pour calculer le déplacement d'octave ?
 - Quel est le domaine numérique autorisé pour le déplacement d'octave ?
 - Le suffixe `0` doit-il être accepté ou omis ?
 - Comment gérer les espaces ou séparateurs entre note et suffixe ?
 - Le rendu traditionnel apostrophe/virgule sera-t-il un thème alternatif ou une sortie dédiée ?
+- Comment le contexte musical associe-t-il l'octave de référence à une hauteur absolue ?
