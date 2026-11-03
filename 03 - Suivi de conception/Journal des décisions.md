@@ -21,7 +21,7 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 ## 2026-11-03 — Altération descendante
 
 - **Décision :** employer une voyelle parmi `a`, `e`, `o` selon la syllabe et l'usage.
-- **Précision :** `te`, `ta`, `to` sont des variantes possibles pour le degré `t) abaissé.
+- **Précision :** `te`, `ta`, `to` sont des variantes possibles pour le degré `t` abaissé.
 - **Statut :** principe validé ; table complète non définie.
 
 ## 2026-11-03 — Pas de signe autonome de bécarre
@@ -31,9 +31,10 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 
 ## 2026-11-03 — Déplacement d'octave numérique
 
-- **Décision :** suffixe numérique pour l'aigu (`d1`) et souligné + nombre pour le grave (`d_1`).
-- **Décision :** appliquer aussi cette syntaxe aux syllabes altérées (`di_1`).
-- **Statut :** validé.
+- **Décision :** les exemples `d1`, `d2`, `d_1`, `s_2`, `di_1` et `di1` expriment respectivement les déplacements d'octave indiqués dans la note dédiée.
+- **Décision :** appliquer aussi cette syntaxe aux syllabes altérées.
+- **Point non résolu :** la référence exacte à partir de laquelle le déplacement est compté reste à définir. Ne pas déduire ni imposer cette référence.
+- **Statut :** formes et sens du déplacement validés ; référence à préciser.
 
 ## 2026-11-03 — Référence tonale et mode mineur
 
@@ -45,4 +46,12 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 
 - **Décision :** une équivalence de hauteur sonore ne doit pas entraîner la normalisation automatique de la graphie Sol-fa.
 - **Exemples :** `mi` et `f` peuvent être équivalents en hauteur sans être la même graphie ; `ti_1` ne doit pas être automatiquement remplacé par `d`.
-- **Statut :** principe à considérer comme validé pour la conception actuelle.
+- **Statut :** principe validé pour la conception actuelle.
+
+## 2026-11-03 — Système de notation choisi par partition
+
+- **Décision :** chaque partition déclare son propre système de notation.
+- **Décision :** MireDo prend en charge des systèmes de notation existants et leurs règles établies ; il n'invente pas de nouvelles règles de notation.
+- **Décision :** Sol-fa est le système utilisé par défaut lorsqu'aucun autre système n'est sélectionné. D'autres systèmes déjà définis, par exemple le solfège, peuvent être sélectionnés pour une partition.
+- **Précision :** les règles d'un système ne doivent pas être imposées à un autre système.
+- **Statut :** validé.
