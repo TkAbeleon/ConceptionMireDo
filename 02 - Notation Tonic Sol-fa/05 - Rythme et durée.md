@@ -1,6 +1,6 @@
 # Rythme et durée — Tonic Sol-fa
 
-Cette page consigne les règles rythmiques établies pour MireDo à partir de la notation Tonic Sol-fa décrite. Elle distingue les conventions de notation, les choix possibles du compositeur et les interprétations retenues pour la saisie et le rendu.
+Cette page consigne les conventions de la notation Tonic Sol-fa discutées pour MireDo. Ces conventions appartiennent à la notation Sol-fa ; MireDo doit les prendre en charge et les représenter fidèlement, sans les présenter comme des règles inventées par la plateforme.
 
 ## 1. Structure de la mesure et unités principales
 
@@ -69,9 +69,17 @@ Le point divise une unité en deux parties égales. La subdivision peut être r�
 - `.` : division en deux, soit deux parts de 1/2 unité.
 - `..` : division en quatre, soit quatre parts de 1/4 unité.
 
+Une subdivision peut être vide : elle représente alors un silence. Il est donc possible de commencer une mesure par un silence, sans devoir commencer obligatoirement par une note.
+
+Exemples fournis :
+- `.d:d.d|d:d:d|`
+- `.d|d:d`
+
+Dans ces exemples, le début `.d` montre une première subdivision silencieuse, suivie de la note `d`. Ces exemples sont conservés tels quels comme formes de notation communiquées par l'utilisateur.
+
 La durée d'une note qui n'est suivie d'aucun signe de prolongation est déterminée par la place qu'elle occupe dans la subdivision. Elle n'est pas automatiquement égale à une unité entière : ce n'est pas le séparateur `:` à lui seul qui fixe sa durée.
 
-Exemple confirmé :
+Autre exemple confirmé :
 - `|d.:::|` : la note `d` occupe la première moitié de l'unité (une croche si l'unité vaut un temps de noire) ; la seconde moitié et les unités restantes sont silencieuses.
 
 ### Plusieurs notes dans une même unité
@@ -84,7 +92,7 @@ Exemples de principe :
 - `:dddd:` : quatre notes se partagent l'unité en quatre parts égales.
 - `:dddddd:` : six notes se partagent l'unité en six parts égales.
 
-Cette règle de lecture compacte est retenue pour MireDo. Elle ne signifie pas que la notation Sol-fa traditionnelle définit une règle générale pour toute division possible.
+Cette règle de lecture compacte est retenue pour la saisie décrite. Elle ne signifie pas que la notation Sol-fa traditionnelle définit une règle générale pour toute division possible.
 
 ### Triolets et sextolets
 
@@ -123,7 +131,15 @@ Exemples :
 - `|.d::|` : début de l'unité silencieux, puis note sur la seconde moitié ; l'utilisateur décrit cette figure comme un contretemps.
 - `|d,.d:|` : quatre subdivisions égales : Do sur la première, silence sur la deuxième et la troisième, puis Do sur la quatrième.
 
-## 6. Limites de la notation Sol-fa
+## 6. Nuances, point d'orgue et autres indications musicales
+
+Les nuances (par exemple piano, forte et leurs variations), le point d'orgue ainsi que les autres indications musicales suivent les conventions du solfège/notation musicale. Il ne s'agit pas de règles propres à MireDo.
+
+MireDo doit permettre de représenter ces indications conformément aux conventions musicales, sans leur attribuer une signification ou une syntaxe spécifique inventée par la plateforme.
+
+Les symboles précis, leur syntaxe de saisie et leurs possibilités de personnalisation restent à détailler dans la documentation dédiée aux indications musicales.
+
+## 7. Limites de la notation Sol-fa
 
 La notation décrite fournit des conventions pour :
 - les unités principales ;
@@ -135,13 +151,14 @@ Elle ne définit pas de règle générale pour toutes les divisions possibles. M
 
 Pour les divisions non spécifiées, la syntaxe et le rendu restent à décider explicitement.
 
-## 7. Points restant à préciser
+## 8. Points restant à préciser
 
 Les points suivants ne sont pas encore suffisamment déterminés pour être considérés comme des règles validées :
 
 - La syntaxe exacte des silences dans toutes les subdivisions.
 - La lecture précise de certains exemples de prolongation ou de silence à l'intérieur d'un triolet, notamment `|d.-.d:|`, `:d-d:` et `:d..d:`.
 - La convention de saisie et de rendu des divisions qui ne sont pas définies par la notation Sol-fa.
+- Les symboles précis et la syntaxe de saisie des nuances, du point d'orgue et des autres indications musicales.
 - Les autres signatures et regroupements qui n'ont pas encore été explicitement validés.
 
 Les exemples encore ouverts ne doivent pas être utilisés pour déduire automatiquement une règle générale.
