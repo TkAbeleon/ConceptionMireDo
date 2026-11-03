@@ -31,7 +31,18 @@ Les utilisateurs qui connaissent la notation classique peuvent choisir directeme
 
 Cette représentation classique est une possibilité avancée ; elle ne doit pas être imposée aux utilisateurs qui travaillent uniquement en Tonic Sol-fa.
 
-## 4. Principes à respecter
+## 4. Présentation d'une partition à plusieurs voix
+
+Lorsque la partition comporte plusieurs voix :
+
+- Les portées sont disposées les unes sous les autres.
+- Les barres de mesure sont alignées et se prolongent verticalement à travers l'ensemble des portées, comme dans une partition classique.
+- Un crochet relie les portées au début de chaque ligne de système, comme en solfège classique.
+- Ce crochet est affiché par défaut. L'utilisateur peut toutefois choisir de le masquer.
+
+Cette présentation s'applique à l'ensemble des voix de la partition.
+
+## 5. Principes à respecter
 
 - Le nom d'une voix est libre et indépendant de sa référence de portée.
 - La structure SATB est proposée par défaut, mais reste personnalisable.
@@ -39,3 +50,4 @@ Cette représentation classique est une possibilité avancée ; elle ne doit pas
 - En mode Sol-fa, la sélection numérique est la représentation destinée à l'utilisateur.
 - En mode avancé, les clés peuvent être présentées avec leur notation classique.
 - MireDo doit conserver une séparation entre le nom de la voix, sa référence de portée et sa hauteur de registre. Ces propriétés ne doivent pas être confondues.
+- Pour une partition à plusieurs voix, les barres de mesure traversent toutes les portées et le crochet de système est visible par défaut, avec une option pour le masquer.
