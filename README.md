@@ -6,7 +6,7 @@
 
 ## État du projet
 
-<badge>Conception en cours</badge>
+**Statut :** Conception en cours
 
 La conception avance par domaines. Une règle discutée n'est pas automatiquement une règle définitive :
 chaque document doit distinguer les éléments **validés**, **provisoires** et **à clarifier**.
@@ -53,10 +53,10 @@ chaque document doit distinguer les éléments **validés**, **provisoires** et 
 
 ## Convention de statut
 
-- <badge color="success">Validé</badge> Décision explicitement confirmée.
-- <badge color="warning">Provisoire</badge> Proposition de travail non définitivement arrêtée.
-- <badge color="secondary">À clarifier</badge> Information insuffisante ou question en attente.
-- <badge color="info">À concevoir</badge> Sujet identifié, pas encore spécifié.
+- **Validé** — Décision explicitement confirmée.
+- **Provisoire** — Proposition de travail non définitivement arrêtée.
+- **À clarifier** — Information insuffisante ou question en attente.
+- **À concevoir** — Sujet identifié, pas encore spécifié.
 
 ## Historique récent
 
