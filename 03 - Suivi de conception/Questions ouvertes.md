@@ -10,11 +10,11 @@ Cette page centralise les questions qui nécessitent une décision explicite. Un
 
 ## Octaves
 
-- [ ] Expliquer et fixer la référence exacte à partir de laquelle on compte les déplacements d'octave. Les exemples `d1` (une octave plus haut), `d2` (deux octaves plus haut) et `d_1` (une octave plus bas) sont compris, mais la référence n'est pas encore définie.
-- [ ] Fixer la plage numérique autorisée.
-- [ ] Déterminer si `d0` est accepté ou si l'absence de suffixe a une autre signification.
+- [ ] Fixer la plage numérique autorisée pour les déplacements d'octave.
+- [ ] Déterminer si `d0` est accepté ou omis.
 - [ ] Définir les règles lexicales pour éviter les ambiguïtés de parsing.
 - [ ] Choisir les rendus typographiques disponibles (exposants/indices, apostrophes/virgules).
+- [ ] Déterminer comment le contexte musical associe l'octave de référence implicite à une hauteur absolue.
 
 ## Référence tonale
 
