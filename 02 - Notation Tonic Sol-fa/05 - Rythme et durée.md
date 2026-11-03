@@ -162,3 +162,47 @@ Les points suivants ne sont pas encore suffisamment déterminés pour être cons
 - Les autres signatures et regroupements qui n'ont pas encore été explicitement validés.
 
 Les exemples encore ouverts ne doivent pas être utilisés pour déduire automatiquement une règle générale.
+
+
+## 9. Doubles barres et changements de tonalité
+
+### Comportement général de la double barre
+
+Par défaut, la double barre conserve son comportement habituel en notation musicale : elle peut notamment marquer la fin d'une phrase musicale ou accompagner un changement de clef ou de mesure.
+
+La double barre n'est pas automatiquement obligatoire à ces endroits. Son utilisation dépend de la partition et des conventions appliquées.
+
+### Particularité de certaines partitions Tonic Sol-fa de FFPM
+
+Dans certaines notations Tonic Sol-fa utilisées par FFPM, la double barre peut également servir à indiquer une prolongation de mesure. Cet usage particulier doit être pris en charge par MireDo comme une fonctionnalité optionnelle, mais ne doit pas être activé comme comportement par défaut.
+
+### Double barre facultative lors d'un changement de tonalité ou d'une fin de phrase
+
+Lors d'un changement de tonalité, le compositeur peut écrire le changement sans double barre ou choisir d'en placer une.
+
+Exemples de formes communiquées :
+- Sans double barre : `|:!:changement de tonalité|`.
+- Avec double barre : `|:!||changement de tonalité|`.
+
+Une phrase musicale peut également se terminer au milieu d'une mesure. Là encore, la double barre peut être omise ou ajoutée pour rendre la séparation plus visible.
+
+La double barre reste donc une indication facultative dans ces cas : MireDo ne doit pas l'insérer automatiquement à chaque changement de tonalité ni à chaque fin de phrase.
+
+### Indication de transition entre deux tonalités
+
+Lorsqu'une partition passe d'une tonalité à une autre, une indication entre parenthèses peut être placée avant la note écrite dans la nouvelle tonalité.
+
+Exemple communiqué : tonalité initiale C, puis changement vers D :
+
+`|d:d!(l_1)s_1:s_1|`
+
+Dans cet exemple :
+- `(l_1)` est une indication facultative de transition ;
+- elle représente, dans la tonalité précédente, l'équivalent de la note suivante, laquelle est déjà écrite dans la nouvelle tonalité ;
+- elle sert à faciliter la lecture et l'anticipation du changement de tonalité ;
+- elle ne remplace pas la note suivante et ne constitue pas une note supplémentaire à jouer ;
+- `s_1` est la note écrite après le changement, selon la nouvelle tonalité.
+
+Cette indication entre parenthèses peut être affichée ou omise selon le choix du compositeur. MireDo doit préserver cette distinction et ne pas la traiter comme une note ordinaire.
+
+La syntaxe complète des changements de tonalité et le comportement exact de la double barre dans le cas particulier de la prolongation de mesure restent à préciser.
