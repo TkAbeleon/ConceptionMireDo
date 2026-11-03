@@ -1,0 +1,41 @@
+# Voix et portées — MireDo
+
+## 1. Structure des voix
+
+MireDo propose par défaut une structure chorale SATB :
+
+- S : Soprano ;
+- A : Alto ;
+- T : Ténor ;
+- B : Basse.
+
+Cette structure est une valeur par défaut, pas une obligation. Le compositeur peut choisir une autre structure, ajouter des voix et leur donner librement un nom : lettre, nom de registre ou appellation personnalisée (par exemple `S`, `Voix 1`, etc.).
+
+Le nombre de voix n'est donc pas limité à quatre.
+
+## 2. Référence de portée en mode Tonic Sol-fa
+
+En mode Tonic Sol-fa, l'utilisateur peut choisir une référence numérique plutôt que devoir connaître les noms des clés de la notation classique.
+
+La correspondance de base est :
+
+- `0` : clé de Sol ;
+- `-1` : clé de Fa ;
+- les autres valeurs entières (`+1`, `+2`, `-2`, etc.) représentent les autres positions de référence selon la même logique numérique.
+
+Chaque voix possède sa propre référence de portée. L'utilisateur Sol-fa peut ainsi configurer ses voix sans avoir à maîtriser la terminologie des clés du solfège classique.
+
+## 3. Notation classique pour les utilisateurs avancés
+
+Les utilisateurs qui connaissent la notation classique peuvent choisir directement les clés avec leur dénomination musicale (Sol, Fa, Ut/Do et leurs positions).
+
+Cette représentation classique est une possibilité avancée ; elle ne doit pas être imposée aux utilisateurs qui travaillent uniquement en Tonic Sol-fa.
+
+## 4. Principes à respecter
+
+- Le nom d'une voix est libre et indépendant de sa référence de portée.
+- La structure SATB est proposée par défaut, mais reste personnalisable.
+- Chaque voix possède sa propre référence de portée.
+- En mode Sol-fa, la sélection numérique est la représentation destinée à l'utilisateur.
+- En mode avancé, les clés peuvent être présentées avec leur notation classique.
+- MireDo doit conserver une séparation entre le nom de la voix, sa référence de portée et sa hauteur de registre. Ces propriétés ne doivent pas être confondues.
