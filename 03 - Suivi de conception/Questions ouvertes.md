@@ -1,6 +1,6 @@
 # Questions ouvertes
 
-Cette page centralise les questions qui nécessitent une décision explicite. Une question ne doit pas être considérée comme résolue par une simple proposition dans une discussion.
+Cette page centralise les questions qui nécessitent une décision explicite. Elles ne sont pas toutes prioritaires : les points secondaires peuvent rester ouverts jusqu'à ce qu'un besoin concret apparaisse pendant la conception, l'implémentation ou les tests.
 
 ## Notation des altérations
 
@@ -11,10 +11,10 @@ Cette page centralise les questions qui nécessitent une décision explicite. Un
 ## Octaves
 
 - [ ] Fixer la plage numérique autorisée pour les déplacements d'octave.
-- [ ] Déterminer si `d0` est accepté ou omis.
 - [ ] Définir les règles lexicales pour éviter les ambiguïtés de parsing.
 - [ ] Choisir les rendus typographiques disponibles (exposants/indices, apostrophes/virgules).
 - [ ] Déterminer comment le contexte musical associe l'octave de référence implicite à une hauteur absolue.
+- [ ] Décider du traitement de suffixes particuliers comme `0` uniquement si un besoin concret se présente.
 
 ## Référence tonale
 
@@ -26,3 +26,7 @@ Cette page centralise les questions qui nécessitent une décision explicite. Un
 
 - [ ] Définir une représentation séparant la syllabe écrite, le degré, l'altération, le déplacement d'octave et la hauteur calculée.
 - [ ] Décider quelles informations sont nécessaires pour reconstituer exactement la graphie originale.
+
+## Priorisation
+
+Les questions ci-dessus ne doivent pas bloquer les décisions fondamentales. Traiter d'abord les règles nécessaires au fonctionnement principal de MireDo ; reporter les détails et cas limites jusqu'à ce qu'ils deviennent pertinents pour une implémentation ou un test concret.
