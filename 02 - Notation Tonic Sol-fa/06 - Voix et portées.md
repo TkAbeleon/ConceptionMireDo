@@ -70,3 +70,24 @@ MireDo prend également en charge les sauts de page :
 
 Ces règles concernent la mise en page du document et ne modifient ni la structure musicale ni la durée des mesures. La syntaxe des commandes de mise en page sera précisée dans la conception technique.
 
+## 7. Placement des paroles dans une partition à plusieurs voix
+
+Les paroles sont écrites une seule fois pour l'ensemble vocal, et non répétées sous chaque portée.
+
+Deux présentations sont proposées :
+
+### Présentation par défaut : paroles sous toutes les portées
+
+Toutes les portées de la partition sont regroupées au-dessus de la ligne de paroles. Les paroles sont placées une seule fois sous l'ensemble des portées, quelle que soit la structure vocale choisie (SATB ou autre).
+
+### Présentation alternative : paroles entre deux groupes de portées
+
+Les paroles peuvent être placées entre deux groupes de portées. Dans une partition SATB, les portées S et A forment le groupe supérieur ; les portées T et B forment le groupe inférieur. Les paroles sont écrites une seule fois entre ces deux groupes.
+
+Cette deuxième présentation reprend la disposition des barres utilisée en solfège classique :
+- au début du système, la barre verticale initiale est longue et relie les portées ;
+- au niveau de la ligne de paroles, la barre de mesure ne traverse pas l'espace réservé aux paroles entre les deux groupes de portées. Les portées du groupe supérieur et celles du groupe inférieur restent chacune délimitées selon cette disposition.
+
+Cette présentation alternative n'est pas limitée à SATB : les groupes de portées peuvent être adaptés à la structure vocale de la partition.
+
+Dans les deux présentations, les paroles restent uniques et sont alignées avec les notes auxquelles elles correspondent.
