@@ -24,8 +24,8 @@ Cette page centralise les questions qui nécessitent une décision explicite. El
 
 ## Modèle interne
 
-- [ ] Définir une représentation séparant la syllabe écrite, le degré, l'altération, le déplacement d'octave et la hauteur calculée.
-- [ ] Décider quelles informations sont nécessaires pour reconstituer exactement la graphie originale.
+- [ ] Définir les propriétés et types exacts du modèle d'exécution qui porteront la graphie originale, la coordonnée chromatique entière et les contextes nécessaires.
+- [ ] Définir la conversion technique entre référence tonale, graphie Sol-fa, octave et coordonnée numérique, en conformité avec les règles déjà validées.
 
 ## Format natif `.mrd`
 
