@@ -131,3 +131,12 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Périmètre :** cette clarification porte sur la division binaire uniquement. Les divisions non binaires, notamment les triolets et sextolets, seront analysées dans une étape ultérieure et ne doivent pas être déduites de cette règle.
 - **Statut :** clarification de la convention Tonic Sol-fa confirmée par l'utilisateur.
 
+## 2026-11-04 — Répartition implicite des notes et prolongations
+
+- **Décision :** lorsqu'une unité ne contient aucun signe de division explicite (`.` ou `,`), sa durée est répartie également entre les notes et les signes de prolongation présents.
+- **Décision :** chaque note et chaque signe `-` compte comme un élément de même durée ; la somme de ces éléments remplit exactement l'unité.
+- **Exemples :** `:d-d:` contient deux notes et une prolongation, soit trois éléments de `1/3` ; la première note dure `2/3` et la seconde `1/3`. `:dd-:` contient également trois éléments de `1/3` ; la première note dure `1/3` et la seconde `2/3`. `:dddd:` donne quatre notes de `1/4`, et `:ddddd:` cinq notes de `1/5`.
+- **Précision :** dans cette répartition implicite, les éléments comptés remplissent toute l'unité ; elle ne permet donc pas d'insérer une portion silencieuse.
+- **Orientation d'architecture :** les choix de saisie compacte/explicite et de visualisation relèvent de l'éditeur et ne doivent pas modifier la logique musicale interne. Les modalités d'interface et de stockage des préférences restent à concevoir.
+- **Statut :** règle de répartition confirmée par l'utilisateur ; modalités d'interface encore à concevoir.
+
