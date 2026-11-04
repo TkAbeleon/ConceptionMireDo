@@ -91,3 +91,9 @@ Cette deuxième présentation reprend la disposition des barres utilisée en sol
 Cette présentation alternative n'est pas limitée à SATB : les groupes de portées peuvent être adaptés à la structure vocale de la partition.
 
 Dans les deux présentations, les paroles restent uniques et sont alignées avec les notes auxquelles elles correspondent.
+
+### Paroles indépendantes pour une voix
+
+Dans certains passages chorals, une voix peut avoir un texte différent ou avancer indépendamment des autres voix (comme cela peut se présenter dans le *Hallelujah* de Haendel). Dans ce cas, les paroles propres à cette voix sont placées directement sous sa portée.
+
+Cette disposition peut être utilisée ponctuellement pour une ou plusieurs voix concernées, tandis que les autres voix conservent leur disposition de paroles commune. Elle ne constitue pas le mode général par défaut : elle répond aux besoins du passage musical.
