@@ -2,59 +2,90 @@
 
 ## État des règles
 
-<badge color="success">Validé</badge> Principe de l'altération ascendante par ajout de `i`.
+<badge color="success">Principe validé</badge> MireDo accepte les formes d'altération définies par la convention Tonic Sol-fa retenue, y compris les variantes rares.
 
-<badge color="warning">Partiel</badge> Principe de l'altération descendante par voyelle ; choix exact à préciser selon le degré et la convention retenue.
+<badge color="success">Principe validé</badge> Les équivalences de hauteur sont traitées selon le même principe que les équivalences enharmoniques du solfège classique.
 
 ## Altération ascendante
 
-L'ajout de la voyelle `i` au symbole du degré indique une élévation d'un demi-ton :
+L'ajout de la voyelle `i` au symbole du degré indique une élévation d'un demi-ton.
 
-| Degré | Forme altérée |
-|---|---|
-| `d` | `di` |
-| `r` | `ri` |
-| `m` | `mi` |
-| `f` | `fi` |
-| `s` | `si` |
-| `l` | `li` |
-| `t` | `ti` |
+Formes :
+
+- `d` devient `di`
+- `r` devient `ri`
+- `m` devient `mi`
+- `f` devient `fi`
+- `s` devient `si`
+- `l` devient `li`
+- `t` devient `ti`
 
 ## Altération descendante
 
-Pour abaisser un degré d'un demi-ton, une voyelle parmi `a`, `e` ou `o` est utilisée selon la syllabe et la convention.
+Pour abaisser un degré d'un demi-ton, la convention Tonic Sol-fa utilise les formes vocaliques correspondantes. Plusieurs variantes peuvent exister selon le degré et l'usage.
 
-Exemple confirmé par l'utilisateur : le degré `t` abaissé peut être écrit `te`, `ta` ou `to`, selon la variante utilisée.
+MireDo doit accepter toutes les formes valides définies par cette convention, y compris celles qui sont peu fréquentes. Il ne faut pas limiter le parseur aux seules formes les plus courantes.
 
-**Important :** la forme descendante exacte de chaque degré n'est pas encore arrêtée dans la conception MireDo. Ne pas générer automatiquement une table complète de formes sans validation.
+Exemple confirmé :
 
-## Exemple de séquence
+- `te`, `ta` et `to` sont des variantes acceptées pour le degré `t) abaissé.
+- Les autres formes descendantes prévues par la convention sont également acceptées, même si elles sont rarement utilisées.
 
-Une séquence couramment rencontrée dans la convention décrite est :
+La liste exhaustive des variantes et leur association à chaque degré doivent rester conformes aux règles du Tonic Sol-fa ; MireDo ne doit pas inventer de nouvelles formes.
 
-`d di r ri m f fi s si l te`
+## Équivalences de hauteur et enharmonie
 
-La forme `te` peut avoir les variantes `ta` ou `to` selon l'usage.
+Le Tonic Sol-fa est traité selon le même principe que le solfège classique : deux graphies différentes peuvent désigner une même hauteur sonore.
 
-## Orthographe et équivalence sonore
+En solfège classique, par exemple :
 
-Une note altérée peut produire la même hauteur en tempérament égal qu'un autre degré écrit. Cela ne justifie pas de remplacer automatiquement sa graphie.
+- C♭ et B peuvent désigner la même hauteur.
+- E♯ et F peuvent désigner la même hauteur.
 
-Exemple : `mi` (Mi augmenté) et `f` (Fa) peuvent correspondre à la même hauteur sonore dans un contexte tempéré, mais leur identité Sol-fa écrite reste distincte.
+Le même principe s'applique au Tonic Sol-fa. Exemples :
 
-MireDo doit donc séparer :
-1. la graphie saisie ;
-2. le degré et l'altération interprétés ;
-3. la hauteur absolue calculée.
+- `de` et `t` peuvent désigner la même hauteur.
+- `mi` et `f` peuvent désigner la même hauteur.
+
+Ces équivalences sont des équivalences de hauteur, pas des substitutions orthographiques. Elles dépendent du contexte d'octave : une équivalence située à la limite de l'octave doit conserver le déplacement d'octave correspondant.
+
+MireDo doit donc distinguer :
+
+1. la graphie originale saisie ;
+2. le degré Sol-fa et son altération ;
+3. la hauteur absolue calculée, octave comprise.
+
+Le calculateur de hauteur peut reconnaître deux graphies comme équivalentes, mais l'éditeur, le parseur et la sérialisation doivent conserver la graphie originale. MireDo ne doit jamais réécrire automatiquement une note en sa forme enharmonique équivalente.
+
+## Formes courantes et formes rares
+
+Toutes les formes valides sont acceptées, mais elles n'ont pas toutes la même fréquence d'utilisation.
+
+Les formes courantes à privilégier dans l'affichage pédagogique, les aides à la saisie et les suggestions sont notamment :
+
+`d`, `di`, `r`, `ri`, `m`, `mi`, `f`, `fi`, `s`, `l`, `te`, `ti`, `to`.
+
+Les autres formes valides restent prises en charge, sans être mises au même niveau de visibilité. Elles peuvent être peu connues des débutants et utilisées seulement dans des contextes particuliers.
+
+Cette préférence d'interface ne constitue pas une restriction grammaticale : une forme rare mais valide doit être analysée et conservée.
 
 ## Signes accidentels
 
-Dans la convention décrite par l'utilisateur, on n'ajoute pas de symbole autonome de bécarre à la notation Sol-fa. Les syllabes Sol-fa et leurs formes altérées sont utilisées directement.
+Dans la convention Tonic Sol-fa décrite ici, les altérations sont exprimées par les syllabes et leurs variantes. Les symboles autonomes `♮`, `♯` et `♭` ne sont pas introduits comme signes écrits des notes Sol-fa, sauf décision distincte concernant une autre notation.
 
-Les symboles conventionnels `♮`, `♯` et `♭` ne doivent donc pas être introduits comme signes écrits de cette notation sans décision explicite.
+Les lettres `b` et `#` peuvent être utilisées dans les étiquettes de tonalité conformément aux règles de référence tonale ; cela ne signifie pas qu'elles remplacent les formes syllabiques dans les notes Sol-fa.
 
-## Questions ouvertes
+## Conséquences pour l'implémentation
 
-- Quelle forme descendante retenir par défaut pour chaque degré ?
-- Les variantes `te`, `ta`, `to` doivent-elles être toutes acceptées en entrée ?
-- Le parseur doit-il conserver la variante exacte saisie lors d'une sérialisation ?
+- Le parseur reconnaît toutes les graphies valides du Tonic Sol-fa.
+- Le moteur de hauteur calcule leur hauteur absolue et détecte les équivalences enharmoniques.
+- La graphie d'origine est conservée dans le modèle de données et lors de la sérialisation.
+- Aucune normalisation automatique ne remplace une graphie par une autre.
+- L'interface privilégie les formes courantes, tout en permettant la saisie et l'affichage des formes rares.
+- La validation porte sur la conformité à la convention Sol-fa, pas sur la fréquence d'utilisation d'une forme.
+
+## Points restant à préciser
+
+- Compléter, à partir de la convention de référence, l'inventaire exhaustif des formes descendantes et de leurs variantes.
+- Déterminer si les suggestions de saisie doivent proposer les formes rares à la demande ou seulement les accepter lorsqu'elles sont saisies.
+- Définir précisément la représentation des équivalences aux limites d'octave dans le modèle de hauteur.
