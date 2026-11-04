@@ -39,43 +39,28 @@ Aucune question de cette page n'est considérée comme décidée par le seul fai
 - [ ] Quels champs seront calculés à l'ouverture plutôt qu'enregistrés ?
 - [ ] Comment les groupes rythmiques et les prolongations seront-ils reliés aux unités et mesures ?
 
-### 5.1 Unité temporelle de référence — décision ouverte
+### 5.1 Références temporelles — décisions validées
 
-**Statut : non décidé.** Deux options sont étudiées pour exprimer les fractions exactes de durée dans le modèle logique.
+**Statut : validé par l'utilisateur.** Le modèle distingue deux références complémentaires qui ne doivent pas être confondues.
 
-#### Option A — La noire comme unité de référence
+#### Unité native Tonic Sol-fa — référence structurelle des durées
 
-**Avantages :**
-- unité conventionnelle familière dans les logiciels de notation et les représentations musicales classiques ;
-- échanges et conversions potentiellement plus directs avec MIDI et les outils qui expriment les durées en noires ou fractions de noire ;
-- même unité de référence quelle que soit la signature rythmique.
+- Les durées exactes sont exprimées par des fractions de l'unité principale délimitée par `:`.
+- La valeur de cette unité dépend du dénominateur de la signature, conformément aux conventions documentées dans [[../../02 - Notation Tonic Sol-fa/05 - Rythme et durée]].
+- Cette référence organise la hiérarchie des mesures, unités, subdivisions et événements.
 
-**Inconvénients :**
-- la durée de l'unité native Sol-fa doit être convertie avant d'être exprimée dans le modèle ;
-- la relation entre l'organisation écrite avec les séparateurs `:` et les durées stockées est moins immédiate ;
-- la conversion ajoute une étape conceptuelle et technique au traitement de la notation source.
+#### Noire — référence conventionnelle du tempo
 
-#### Option B — L'unité native Tonic Sol-fa comme unité de référence
+- Les indications de tempo sont exprimées en noires par minute : `♩ = valeur`.
+- Le tempo initial, lorsqu'il est défini, est enregistré dans le contexte musical de la partition.
+- Tout changement de tempo est enregistré à sa position exacte dans la chronologie commune.
+- La référence de noire par minute reste la même, quelle que soit la signature rythmique ou l'unité native Sol-fa.
 
-L'unité native désigne ici l'unité principale délimitée par `:`. Sa valeur dépend du dénominateur de la signature, conformément aux conventions documentées dans [[../../02 - Notation Tonic Sol-fa/05 - Rythme et durée]].
+#### Conséquence
 
-**Avantages :**
-- correspondance directe entre la structure rythmique écrite et la hiérarchie du modèle ;
-- subdivisions et prolongations exprimables naturellement comme fractions d'une unité native ;
-- interprétation et inspection du modèle plus proches de la notation source Tonic Sol-fa.
+La noire n'est pas l'unité structurelle des subdivisions Sol-fa. L'unité native Sol-fa ne remplace pas la référence conventionnelle du tempo.
 
-**Inconvénients :**
-- une même fraction n'a pas nécessairement la même durée absolue lorsque le dénominateur de la signature change ;
-- les échanges avec MIDI et les outils fondés sur la noire nécessitent une conversion ;
-- les opérations entre mesures de signatures différentes doivent tenir compte de la valeur réelle de l'unité native dans chaque contexte.
-
-#### Recommandation de conception — non approuvée
-
-La recommandation actuelle est de retenir l'unité native Tonic Sol-fa comme référence structurelle du modèle, tout en prévoyant une conversion exacte vers la noire pour les échanges externes.
-
-Cette approche privilégie la fidélité à la notation que MireDo doit représenter, sans empêcher l'interopérabilité. Elle ne devient pas une décision tant que l'utilisateur ne l'a pas explicitement confirmée.
-
-**Question à trancher :** les fractions exactes de durée doivent-elles être exprimées par rapport à la noire ou par rapport à l'unité native Tonic Sol-fa ?
+Un changement de signature et un changement de tempo sont deux informations distinctes. Ils peuvent être positionnés au même endroit dans la partition, sans être confondus.
 
 ## 6. Référence tonale et hauteur
 
@@ -89,8 +74,8 @@ Cette approche privilégie la fidélité à la notation que MireDo doit représe
 - [ ] Comment identifier les couplets et leurs lignes communes ?
 - [ ] Comment relier les syllabes aux attaques musicales de manière durable ?
 - [ ] Comment enregistrer les paroles propres à une voix ?
-- [ ] Comment représenter les accords latins, Sol-fa et chiffres romains sur la chronologie ?
-- [ ] Comment représenter les reprises, nuances, tempos, articulations, ornements et points d'orgue ?
+- [ ] Comment représenter les accords latins, Sol-fa et chiffres romains ?
+- [ ] Comment représenter les reprises, nuances, articulations, ornements et points d'orgue ?
 
 ## 8. Mise en page et ressources
 
