@@ -62,6 +62,7 @@ chaque document doit distinguer les éléments **validés**, **provisoires** et 
 
 - **2026-11-03** — Création de la structure documentaire Obsidian et séparation de la première conception historique.
 - **2026-11-03** — Formalisation initiale des conventions Tonic Sol-fa : degrés, altérations, octaves et référence tonale.
+- **2026-11-04** — Validation des règles de crochet, de barre initiale, de séparateur conservé et de barre de fermeture des systèmes.
 
 ## Comment contribuer à la conception
 
