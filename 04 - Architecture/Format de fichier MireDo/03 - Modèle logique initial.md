@@ -15,7 +15,7 @@ Fichier MireDo
 │   ├── reference_tone
 │   ├── time_signature
 │   ├── disposition
-│   └── tempo
+│   └── tempo_initial
 ├── voices
 │   ├── id
 │   ├── name
@@ -24,12 +24,13 @@ Fichier MireDo
 │   ├── mesure commune
 │   ├── données de chaque voix
 │   └── indications et barres
+├── tempo_changes
 ├── lyrics
 ├── annotations
 └── layout
 ```
 
-Les blocs sont séparés conceptuellement afin de ne pas mélanger les règles musicales, les voix et les préférences de rendu.
+Les blocs sont séparés conceptuellement afin de ne pas mélanger les règles musicales, les voix et les préférences de rendu. Le tempo initial appartient au contexte temporel de la partition ; les changements ultérieurs sont positionnés dans la chronologie commune.
 
 ## 2. Exemple JSON exploratoire
 
@@ -55,7 +56,11 @@ L'exemple suivant reprend l'intention générale de la proposition initiale, mai
     "notation_system": "tonic-sol-fa",
     "reference_tone": "D",
     "time_signature": "4/4",
-    "disposition": [2, 2]
+    "disposition": [2, 2],
+    "initial_tempo": {
+      "unit": "quarter_note",
+      "beats_per_minute": 80
+    }
   },
   "voices": [
     {
@@ -95,6 +100,19 @@ L'exemple suivant reprend l'intention générale de la proposition initiale, mai
       }
     }
   ],
+  "tempo_changes": [
+    {
+      "position": {
+        "measure_id": "m2",
+        "offset": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      "unit": "quarter_note",
+      "beats_per_minute": 100
+    }
+  ],
   "lyrics": {
     "common": [],
     "by_voice": {}
@@ -106,6 +124,8 @@ L'exemple suivant reprend l'intention générale de la proposition initiale, mai
   }
 }
 ```
+
+Cet exemple est uniquement illustratif : il ne fixe pas la structure définitive des positions, ni le schéma de sérialisation. Il montre cependant que le tempo initial et les changements de tempo sont distincts de la hiérarchie des unités Sol-fa.
 
 ## 3. Ce que cet exemple démontre
 
@@ -131,7 +151,34 @@ Cette approche est simple et permet de réutiliser progressivement le travail du
 
 Le maintien de la chaîne écrite comme source de vérité, ou son remplacement par une liste d'événements structurés, n'est pas encore décidé.
 
-## 4. Attention : signatures variables
+## 4. Deux références temporelles distinctes
+
+Le modèle utilise deux références qui répondent à des besoins différents. Elles ne doivent pas être confondues ni fusionnées dans un seul champ.
+
+### 4.1 Unité native Tonic Sol-fa : structure des durées
+
+L'unité native est l'unité principale délimitée par `:`. Sa valeur dépend du dénominateur de la signature rythmique, conformément aux conventions documentées dans [[../../02 - Notation Tonic Sol-fa/05 - Rythme et durée]].
+
+Les fractions exactes des subdivisions et des événements sont exprimées relativement à cette unité native. La hiérarchie mesure → voix → unité → subdivision → événement reste donc fidèle à l'organisation de la notation Sol-fa.
+
+### 4.2 Noire : référence conventionnelle du tempo
+
+La noire sert de référence fixe pour exprimer la vitesse :
+
+- `♩ = 80` signifie 80 noires par minute ;
+- le tempo initial est enregistré dans le contexte musical de la partition ;
+- un changement de tempo est enregistré à sa position précise dans la chronologie commune ;
+- toutes les indications de tempo utilisent la même référence de noire par minute.
+
+La noire n'est donc pas l'unité qui structure les subdivisions Sol-fa. Elle sert à exprimer le tempo et à convertir les durées vers les conventions d'autres logiciels.
+
+### 4.3 Exemple d'indépendance
+
+En 6/8, une unité native Sol-fa vaut une croche selon les conventions décrites. Si le tempo est indiqué `♩ = 80`, la vitesse reste définie comme 80 noires par minute. La relation entre l'unité native et la noire est calculée à partir de la signature ; elle ne change pas la référence de tempo.
+
+Un changement de signature et un changement de tempo restent deux données distinctes, même lorsqu'ils apparaissent à la même position musicale.
+
+## 5. Attention : signatures variables
 
 La proposition initiale utilise successivement 4/4, 3/4 et 2/4.
 
@@ -141,7 +188,7 @@ Une future version du modèle pourrait prévoir une surcharge de signature au ni
 
 Si les signatures variables sont validées, la mesure qui change de signature devra porter une seule valeur commune à toutes les voix, jamais une valeur indépendante dans chaque voix.
 
-## 5. Éléments volontairement non spécifiés dans cet exemple
+## 6. Éléments volontairement non spécifiés dans cet exemple
 
 L'exemple ne fixe pas encore :
 
@@ -157,7 +204,7 @@ L'exemple ne fixe pas encore :
 
 Ces éléments sont identifiés dans [[02 - Exigences du format]] et [[04 - Questions ouvertes]].
 
-## 6. Utilisation du Studio comme référence
+## 7. Utilisation du Studio comme référence
 
 Le Studio contient déjà un modèle d'exécution `Score` qui distingue :
 
@@ -169,51 +216,52 @@ Le Studio contient déjà un modèle d'exécution `Score` qui distingue :
 
 Ce modèle est utile pour identifier les besoins, mais il n'est pas encore un modèle de fichier natif : les Maps, identifiants internes, diagnostics et données calculées devront être examinés avant de décider ce qui est sérialisé.
 
-## 7. Décisions de conception confirmées le 2026-11-04
+## 8. Décisions de conception confirmées le 2026-11-04
 
-Les décisions suivantes précisent le modèle logique sans constituer un schéma JSON définitif.
+### 8.1 Hiérarchie temporelle
 
-### 7.1 Hiérarchie temporelle
-
-Le contenu rythmique doit conserver une organisation hiérarchique explicite :
+Le contenu rythmique conserve une organisation hiérarchique explicite :
 
 ```text
 Partition
 └── Mesure commune
     └── Voix dans la mesure
-        └── Unité
+        └── Unité native Sol-fa
             └── Subdivision
                 └── Événement
 ```
 
-Cette hiérarchie est préférée à une représentation initiale qui aplatirait immédiatement toute la partition en une seule liste chronologique de notes. Elle doit permettre de préserver l'organisation visible et musicale de la notation Tonic Sol-fa.
+Cette hiérarchie est préférée à une représentation initiale qui aplatirait immédiatement toute la partition en une seule liste chronologique de notes.
 
-### 7.2 Durées exactes
+### 8.2 Durées exactes et référence structurelle
 
-Les durées seront représentées par des fractions exactes. Le modèle ne doit pas dépendre de nombres flottants approximatifs pour exprimer les durées musicales.
+Les durées sont représentées par des fractions exactes, exprimées relativement à l'unité native Tonic Sol-fa délimitée par `:`. La valeur de cette unité dépend de la signature rythmique.
 
-La référence de ces fractions reste toutefois à choisir : la noire et l'unité native Tonic Sol-fa sont encore en discussion. Le modèle ne doit donc pas présumer que l'une de ces deux références est déjà adoptée.
+La noire n'est pas l'unité structurelle des subdivisions Sol-fa.
 
-### 7.3 Notes et prolongations
+### 8.3 Référence conventionnelle du tempo
 
-Une note disposera d'une durée totale calculée, incluant ses éventuelles prolongations. En parallèle, la structure conservera les segments d'origine qui composent cette prolongation.
+La noire est la référence conventionnelle de toutes les indications de tempo. Le tempo initial appartient au contexte musical de la partition. Les changements de tempo sont enregistrés à une position précise dans la chronologie commune.
 
-Cette double information a deux rôles distincts :
-- la durée totale sert aux calculs, à la synchronisation et à la lecture ;
-- les segments d'origine préservent la structure de notation et permettent de reconstruire fidèlement l'écriture.
+La signature rythmique et le tempo sont deux paramètres distincts.
 
-Il ne s'agit pas de deux durées indépendantes modifiables séparément : la durée totale est cohérente avec les segments qui la composent.
+### 8.4 Notes et prolongations
 
-### 7.4 Périmètre du socle rythmique
+Une note dispose d'une durée totale calculée, incluant ses éventuelles prolongations. En parallèle, la structure conserve les segments d'origine qui composent cette prolongation.
+
+La durée totale sert aux calculs et à la synchronisation ; les segments préservent l'écriture source. Ces informations doivent rester cohérentes et ne sont pas deux durées indépendantes modifiables séparément.
+
+### 8.5 Périmètre du socle rythmique
 
 Le premier modèle se concentre sur les unités, subdivisions, notes, silences, groupes rythmiques et prolongations.
 
-Les indications supplémentaires — notamment D.C., D.S., nuances, tempo, crescendo/diminuendo et articulations — sont volontairement reportées à une étape ultérieure. Elles ne doivent pas compliquer la définition du socle rythmique.
+Les indications supplémentaires telles que D.C., D.S., nuances, crescendo/diminuendo et articulations sont reportées à une étape ultérieure. Le tempo initial et ses changements font exception : ils sont nécessaires au contexte temporel de la partition et font partie du modèle de base.
 
-### 7.5 Points non décidés
+### 8.6 Points encore ouverts
 
-- L'unité temporelle de référence des fractions n'est pas encore choisie.
-- La nécessité et la forme d'identifiants stables pour les événements n'ont pas encore été décidées.
-- La forme finale de sérialisation et le schéma JSON ne sont pas définis.
+- La nécessité et la forme d'identifiants stables pour les événements.
+- La forme finale de sérialisation et le schéma JSON.
+- La possibilité de changer de signature et de disposition au cours d'une partition.
+- La représentation détaillée des positions temporelles dans le schéma définitif.
 
 Ces points restent dans [[04 - Questions ouvertes]].
