@@ -28,7 +28,7 @@ MireDo doit accepter toutes les formes valides définies par cette convention, y
 
 Exemple confirmé :
 
-- `te`, `ta` et `to` sont des variantes acceptées pour le degré `t) abaissé.
+- `te`, `ta` et `to` sont des variantes acceptées pour le degré `t` abaissé.
 - Les autres formes descendantes prévues par la convention sont également acceptées, même si elles sont rarement utilisées.
 
 La liste exhaustive des variantes et leur association à chaque degré doivent rester conformes aux règles du Tonic Sol-fa ; MireDo ne doit pas inventer de nouvelles formes.
