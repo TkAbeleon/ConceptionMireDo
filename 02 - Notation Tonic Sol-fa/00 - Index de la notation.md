@@ -8,6 +8,7 @@ Ce dossier formalise progressivement les conventions utilisées par MireDo pour 
 - [[02 - Altérations chromatiques]] — formes altérées et orthographe des notes.
 - [[03 - Octaves et représentation]] — suffixes numériques et rendu typographique.
 - [[04 - Référence tonale et mode]] — interprétation des degrés selon la partition.
+- [[05 - Représentation numérique des hauteurs]] — axe chromatique entier, référence numérique de portée et responsabilités de conversion.
 - [[08 - Degrés et symboles d'accords]] — degrés harmoniques et deux systèmes facultatifs d'écriture des accords.
 
 ## Limites de cette section
