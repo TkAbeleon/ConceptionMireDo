@@ -1,6 +1,6 @@
 # Reprises et indications musicales — Tonic Sol-fa
 
-Cette page consigne les conventions de reprise et les indications musicales à prendre en charge dans MireDo. Les principes musicaux décrits ci-dessous proviennent des conventions de notation et de solfège ; MireDo doit les représenter et, lorsque cela est pertinent, les interpréter fidèlement.
+Cette page consigne les conventions de reprise et les indications musicales à prendre en charge dans MireDo. **Leur signification et leur comportement musical restent les mêmes qu'en solfège et en notation musicale habituelle.** MireDo ne doit pas inventer de nouvelles règles musicales : il doit prendre en charge ces conventions et les représenter fidèlement. Seule la manière de noter certaines reprises peut différer en Tonic Sol-fa, notamment par l'emploi d'indications textuelles comme D.C. et D.S. plutôt que par les barres de reprise classiques.
 
 ## 1. Répétitions et reprises en Tonic Sol-fa
 
@@ -54,11 +54,11 @@ Le modèle de MireDo devra pouvoir représenter :
 
 Le moteur de lecture devra interpréter ces indications sans confondre l'ordre de lecture avec l'ordre linéaire des mesures dans le document.
 
-Les règles détaillées de parcours, notamment en présence de plusieurs retours ou de plusieurs Coda, restent à spécifier.
+Les règles détaillées de parcours, notamment en présence de plusieurs retours ou de plusieurs Coda, restent à spécifier. Elles devront respecter les conventions habituelles du solfège ; le travail restant porte sur leur représentation et leur interprétation dans MireDo, pas sur la redéfinition de leur sens musical.
 
 ## 5. Nuances, tempo et indications d'exécution
 
-Les nuances, les indications de tempo, les changements de tempo, les articulations, le point d'orgue et les autres indications d'exécution suivent les mêmes principes musicaux que ceux du solfège et de la notation musicale habituelle. MireDo ne doit pas leur attribuer une sémantique musicale nouvelle.
+Les nuances, les indications de tempo, les changements de tempo, les articulations, le point d'orgue et les autres indications d'exécution conservent exactement les mêmes significations, règles et comportements qu'en solfège et en notation musicale habituelle. Leur utilisation en Tonic Sol-fa ne change pas leur principe musical. MireDo ne doit pas leur attribuer une sémantique musicale nouvelle.
 
 Exemples d'indications à prendre en charge :
 
