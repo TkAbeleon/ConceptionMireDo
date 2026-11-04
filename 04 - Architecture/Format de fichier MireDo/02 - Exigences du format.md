@@ -74,6 +74,7 @@ Le futur modèle doit pouvoir représenter les conventions existantes :
 - subdivisions explicites avec `.` et `,` ;
 - parties vides représentant des silences lorsque la structure de division explicite les permet ;
 - répartition implicite égale des notes et des prolongations lorsqu'aucun signe de division explicite n'est présent : chaque note et chaque `-` compte pour un élément de même durée, et leur somme remplit l'unité ;
+- triolets de trois positions égales et sextolets de six positions égales, chacun occupant une unité native Sol-fa complète ;
 - groupes rythmiques spécifiés ;
 - prolongations `-` ;
 - anacrouses et séparateurs au début d'un passage ;
