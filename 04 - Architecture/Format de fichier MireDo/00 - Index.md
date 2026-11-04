@@ -13,6 +13,8 @@ Ce dossier étudie la proposition d'un conteneur JSON, la compare aux règles mu
 
 ## État actuel de la conception temporelle
 
+La documentation Tonic Sol-fa distingue désormais explicitement la division binaire de l'unité (point puis virgule pour subdiviser une moitié) des divisions non binaires, qui restent à analyser séparément. Voir [[../../02 - Notation Tonic Sol-fa/05 - Rythme et durée]].
+
 Deux références complémentaires sont désormais validées :
 
 - **Structure des durées :** fractions exactes exprimées par rapport à l'unité native Tonic Sol-fa délimitée par `:`.
