@@ -72,6 +72,8 @@ Exemples d'indications à prendre en charge :
 
 MireDo doit pouvoir conserver ces indications dans son modèle musical, les afficher conformément aux conventions graphiques et les transmettre au moteur de lecture ou aux exports lorsqu'une interprétation sonore est prévue.
 
+Les ornements, les trémolos, les répétitions rapides ainsi que les notes de grâce (notamment appoggiatures et acciaccaturas) relèvent du même principe : leur signification, leur durée, leur placement et leur comportement suivent les conventions classiques du solfège. Leur usage en Tonic Sol-fa peut être rare ; il n'est donc pas nécessaire de fixer ici une syntaxe Sol-fa détaillée. Leur traitement technique (saisie, édition, représentation et interprétation) sera précisé ultérieurement dans la conception de MireDo.
+
 Leur syntaxe de saisie, leurs paramètres éventuels (par exemple une valeur de tempo) et les détails de leur rendu restent à spécifier dans la conception.
 
 ## 6. Points restant à préciser
