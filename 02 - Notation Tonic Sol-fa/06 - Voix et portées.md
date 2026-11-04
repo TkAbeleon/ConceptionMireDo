@@ -51,3 +51,22 @@ Cette présentation s'applique à l'ensemble des voix de la partition.
 - En mode avancé, les clés peuvent être présentées avec leur notation classique.
 - MireDo doit conserver une séparation entre le nom de la voix, sa référence de portée et sa hauteur de registre. Ces propriétés ne doivent pas être confondues.
 - Pour une partition à plusieurs voix, les barres de mesure traversent toutes les portées et le crochet de système est visible par défaut, avec une option pour le masquer.
+
+## 6. Mise en page : systèmes, retours à la ligne et pages
+
+La mise en page suit les conventions habituelles des logiciels de notation musicale, avec les comportements par défaut suivants :
+
+### Retours à la ligne
+
+- Par défaut, une mesure entière qui ne tient pas dans la ligne est reportée au système suivant. MireDo ne coupe donc pas automatiquement une mesure pour la faire tenir dans l'espace restant.
+- Le compositeur peut toutefois imposer un retour à la ligne au milieu d'une mesure à l'aide de `/n`.
+- Les portées d'un même système restent alignées et les mesures des différentes voix restent synchronisées.
+
+### Sauts de page
+
+MireDo prend également en charge les sauts de page :
+- saut automatique lorsque la mise en page nécessite une nouvelle page ;
+- possibilité d'insérer un saut de page manuel pour contrôler la présentation de la partition.
+
+Ces règles concernent la mise en page du document et ne modifient ni la structure musicale ni la durée des mesures. La syntaxe éventuelle d'un saut de page manuel sera précisée dans la conception technique.
+
