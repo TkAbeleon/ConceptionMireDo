@@ -93,9 +93,19 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 
 - **Décision :** le modèle logique conserve une hiérarchie temporelle explicite : partition → mesure commune → voix dans la mesure → unité → subdivision → événement.
 - **Décision :** le modèle ne réduit pas dès le départ toute la partition à une simple liste chronologique plate de notes.
-- **Décision :** les durées sont représentées par des fractions exactes afin d'éviter les approximations et les erreurs d'arrondi.
-- **Précision :** l'unité à laquelle ces fractions se rapportent n'est pas encore choisie. La noire et l'unité native Tonic Sol-fa restent deux options à examiner ; aucune n'est approuvée à ce stade.
-- **Statut :** validé pour la hiérarchie et l'exactitude des durées ; unité de référence non décidée.
+- **Décision :** les durées sont représentées par des fractions exactes.
+- **Décision :** les fractions de durée sont exprimées par rapport à l'unité native Tonic Sol-fa, c'est-à-dire l'unité principale délimitée par `:`, dont la valeur dépend de la signature rythmique conformément aux conventions documentées.
+- **Précision :** la noire n'est pas l'unité structurelle des subdivisions Sol-fa ; elle conserve néanmoins un rôle distinct et essentiel comme référence conventionnelle du tempo.
+- **Statut :** validé par l'utilisateur.
+
+## 2026-11-04 — Référence conventionnelle du tempo
+
+- **Décision :** les indications de tempo sont exprimées en noires par minute (♩ = valeur), conformément à la convention musicale usuelle.
+- **Décision :** le contexte musical de la partition conserve le tempo initial lorsqu'il est défini.
+- **Décision :** tout changement de tempo est associé à une position précise dans la chronologie commune de la partition et conserve la même référence de noire par minute.
+- **Précision :** la référence de tempo en noire est indépendante de l'unité native Tonic Sol-fa utilisée pour structurer les mesures, unités et subdivisions.
+- **Précision :** un changement de signature rythmique et un changement de tempo sont deux informations distinctes ; ils peuvent se produire au même emplacement, mais ne doivent pas être confondus.
+- **Statut :** validé par l'utilisateur.
 
 ## 2026-11-04 — Représentation des prolongations dans le modèle
 
@@ -107,6 +117,7 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 ## 2026-11-04 — Périmètre du premier modèle rythmique
 
 - **Décision :** le premier modèle se concentre sur les éléments fondamentaux du contenu rythmique : unités, subdivisions, notes, silences, groupes rythmiques et prolongations.
-- **Décision :** les indications supplémentaires telles que D.C., D.S., nuances, tempo, crescendo/diminuendo et articulations ne sont pas intégrées à ce socle initial.
-- **Précision :** ces éléments pourront être conçus dans une étape ultérieure. Leur exclusion actuelle ne signifie pas qu'ils seront absents du format natif final.
+- **Décision :** les indications de performance et d'expression telles que D.C., D.S., nuances, crescendo/diminuendo et articulations ne sont pas intégrées à ce socle initial.
+- **Précision :** le tempo fait exception à ce report : le tempo initial et ses changements font partie du contexte temporel nécessaire à l'interprétation de la partition.
+- **Précision :** les autres indications pourront être conçues dans une étape ultérieure. Leur exclusion actuelle ne signifie pas qu'elles seront absentes du format natif final.
 - **Statut :** périmètre de conception validé par l'utilisateur.
