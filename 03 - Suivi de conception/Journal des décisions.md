@@ -150,3 +150,13 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Exemples :** `(d.-.d)` indique que la courbe couvre tout `d.-.d`, prolongation comprise ; `(d.d.d)` indique que la courbe couvre les trois notes.
 - **Périmètre :** cette décision fixe la portée graphique de la courbe, sans prétendre définir la syntaxe ni le calcul temporel des groupes non binaires.
 - **Statut :** confirmé par l'utilisateur.
+
+
+## 2026-11-04 — Durée des triolets et sextolets
+
+- **Décision :** un triolet répartit une unité native Sol-fa complète en trois positions égales.
+- **Décision :** un sextolet répartit une unité native Sol-fa complète en six positions égales.
+- **Précision :** le groupe ne change pas la durée de l'unité native ; il en répartit les positions internes.
+- **Précision :** une position occupée par `-` prolonge la note précédente. Elle compte comme une position du groupe, sans produire une nouvelle attaque.
+- **Précision :** la courbe de groupement couvre le fragment complet, prolongations comprises.
+- **Statut :** confirmé par l'utilisateur.
