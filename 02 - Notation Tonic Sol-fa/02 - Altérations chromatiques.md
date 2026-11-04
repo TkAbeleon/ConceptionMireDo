@@ -22,16 +22,11 @@ Formes :
 
 ## Altération descendante
 
-Pour abaisser un degré d'un demi-ton, la convention Tonic Sol-fa utilise les formes vocaliques correspondantes. Plusieurs variantes peuvent exister selon le degré et l'usage.
+Pour abaisser un degré d'un demi-ton, la convention Tonic Sol-fa utilise la voyelle correspondante parmi `a`, `e` et `o`, selon le degré.
 
 MireDo doit accepter toutes les formes valides définies par cette convention, y compris celles qui sont peu fréquentes. Il ne faut pas limiter le parseur aux seules formes les plus courantes.
 
-Exemple confirmé :
-
-- `te`, `ta` et `to` sont des variantes acceptées pour le degré `t` abaissé.
-- Les autres formes descendantes prévues par la convention sont également acceptées, même si elles sont rarement utilisées.
-
-La liste exhaustive des variantes et leur association à chaque degré doivent rester conformes aux règles du Tonic Sol-fa ; MireDo ne doit pas inventer de nouvelles formes.
+La règle d'altération descendante est générale : elle est déjà définie par la convention Tonic Sol-fa et ne doit pas être redéduite séparément pour chaque degré. MireDo applique la voyelle prévue par cette convention ; il ne crée pas de nouvelles formes.
 
 ## Équivalences de hauteur et enharmonie
 
@@ -44,8 +39,12 @@ En solfège classique, par exemple :
 
 Le même principe s'applique au Tonic Sol-fa. Exemples :
 
-- `de` et `t` peuvent désigner la même hauteur.
+- `de` et `t` peuvent désigner la même hauteur, avec le déplacement d'octave approprié.
 - `mi` et `f` peuvent désigner la même hauteur.
+- `t` et la note classique B peuvent désigner la même hauteur.
+- `ti` et la note classique C peuvent désigner la même hauteur.
+- `f` et la note classique F peuvent désigner la même hauteur.
+- `fa` et la note classique E peuvent désigner la même hauteur.
 
 Ces équivalences sont des équivalences de hauteur, pas des substitutions orthographiques. Elles dépendent du contexte d'octave : une équivalence située à la limite de l'octave doit conserver le déplacement d'octave correspondant.
 
@@ -86,6 +85,5 @@ Les lettres `b` et `#` peuvent être utilisées dans les étiquettes de tonalit�
 
 ## Points restant à préciser
 
-- Compléter, à partir de la convention de référence, l'inventaire exhaustif des formes descendantes et de leurs variantes.
 - Déterminer si les suggestions de saisie doivent proposer les formes rares à la demande ou seulement les accepter lorsqu'elles sont saisies.
 - Définir précisément la représentation des équivalences aux limites d'octave dans le modèle de hauteur.
