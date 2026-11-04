@@ -8,8 +8,14 @@ Ce dossier étudie la proposition d'un conteneur JSON, la compare aux règles mu
 
 - [[01 - Analyse de la proposition JSON]] — compatibilité de la proposition initiale avec les règles Tonic Sol-fa et problèmes à résoudre.
 - [[02 - Exigences du format]] — propriétés que le futur format doit respecter.
-- [[03 - Modèle logique initial]] — première organisation des données, explicitement provisoire.
+- [[03 - Modèle logique initial]] — première organisation des données, explicitement provisoire et précisée par les décisions de conception confirmées.
 - [[04 - Questions ouvertes]] — décisions nécessaires avant de stabiliser un schéma.
+
+## État actuel de la conception rythmique
+
+Les décisions déjà confirmées portent sur la hiérarchie temporelle (mesure commune → voix → unité → subdivision → événement), les durées exactes sous forme de fractions, la conservation des segments de prolongation avec une durée totale calculée, et le périmètre du socle rythmique.
+
+**L'unité temporelle de référence des fractions reste non décidée.** La noire et l'unité native Tonic Sol-fa sont comparées dans [[04 - Questions ouvertes]].
 
 ## Périmètre
 
