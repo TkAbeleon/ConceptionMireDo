@@ -13,7 +13,7 @@ Ce dossier étudie la proposition d'un conteneur JSON, la compare aux règles mu
 
 ## État actuel de la conception temporelle
 
-La documentation Tonic Sol-fa distingue désormais la division binaire explicite (point puis virgule pour subdiviser une moitié), la répartition implicite égale des notes et des prolongations en l'absence de signe de division, et les divisions non binaires qui restent à analyser séparément. Dans la répartition implicite, les éléments comptés remplissent toute l'unité : aucun silence ne peut y être inséré. Voir [[../../02 - Notation Tonic Sol-fa/05 - Rythme et durée]].
+La documentation Tonic Sol-fa distingue désormais la division binaire explicite (point puis virgule pour subdiviser une moitié), la répartition implicite égale des notes et des prolongations en l'absence de signe de division, ainsi que les groupes non binaires déjà définis : le triolet répartit une unité en trois positions égales et le sextolet en six positions égales. Dans la répartition implicite, les éléments comptés remplissent toute l'unité : aucun silence ne peut y être inséré. Voir [[../../02 - Notation Tonic Sol-fa/05 - Rythme et durée]].
 
 Deux références complémentaires sont désormais validées :
 
