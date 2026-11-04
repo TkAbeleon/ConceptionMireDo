@@ -60,6 +60,8 @@ Les règles détaillées de parcours, notamment en présence de plusieurs retour
 
 Les nuances, les indications de tempo, les changements de tempo, les articulations, le point d'orgue et les autres indications d'exécution conservent exactement les mêmes significations, règles et comportements qu'en solfège et en notation musicale habituelle. Leur utilisation en Tonic Sol-fa ne change pas leur principe musical. MireDo ne doit pas leur attribuer une sémantique musicale nouvelle.
 
+Cela inclut explicitement les articulations classiques — staccato, legato, accent, tenuto et autres indications équivalentes. Elles sont prises en charge selon les conventions habituelles du solfège, sans qu'il soit nécessaire de définir une règle musicale spécifique à MireDo. La conception de MireDo porte sur leur représentation, leur édition et leur rendu, non sur la réinvention de leur signification.
+
 Exemples d'indications à prendre en charge :
 
 - **Nuances** : piano, forte, pianissimo, fortissimo, crescendo, diminuendo, etc.
