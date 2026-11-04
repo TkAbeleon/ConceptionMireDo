@@ -60,48 +60,102 @@ MireDo ne doit pas confondre la signature de mesure avec la disposition choisie 
 
 ## 3. Subdivisions à l'intérieur d'une unité
 
-Les symboles de subdivision s'appliquent à l'intérieur d'une unité délimitée par `:`.
+Les subdivisions décrites dans cette section se font à l'intérieur d'une unité délimitée par `:`. Il faut distinguer la division binaire, traitée ici, des divisions non binaires, qui ne sont pas encore spécifiées et seront étudiées séparément.
 
-### Division binaire : `.`
+### Division binaire : point `.` et virgule `,`
 
-Le point divise une unité en deux parties égales. La subdivision peut être répétée pour obtenir des parts plus petites :
+Dans la convention décrite ici, le point et la virgule expriment deux étapes successives d'une même logique de division binaire :
 
-- `.` : division en deux, soit deux parts de 1/2 unité.
-- `..` : division en quatre, soit quatre parts de 1/4 unité.
+1. Le point `.` divise l'unité entière en deux moitiés égales. Chacune vaut `1/2` unité.
+2. La virgule `,` divise en deux une moitié déjà obtenue par le point. Chacune des deux nouvelles parts vaut alors `1/4` de l'unité entière.
 
-Une subdivision peut être vide : elle représente alors un silence. Il est donc possible de commencer une mesure par un silence, sans devoir commencer obligatoirement par une note.
+La virgule ne divise donc pas directement l'unité entière en quatre. Elle subdivise une moitié préalablement créée par le point. La division en quatre résulte de ces deux étapes successives.
 
-Exemples fournis :
-- `.d:d.d|d:d:d|`
-- `.d|d:d`
+Schéma de principe :
 
-Dans ces exemples, le début `.d` montre une première subdivision silencieuse, suivie de la note `d`. Ces exemples sont conservés tels quels comme formes de notation communiquées par l'utilisateur.
+```text
+Unité entière :       [          1          ]
+Après le point :      [    1/2   ][    1/2   ]
+Après la virgule :    [1/4][1/4][1/4][1/4]
+```
 
-La durée d'une note qui n'est suivie d'aucun signe de prolongation est déterminée par la place qu'elle occupe dans la subdivision. Elle n'est pas automatiquement égale à une unité entière : ce n'est pas le séparateur `:` à lui seul qui fixe sa durée.
+Les signes doivent être lus dans leur position au sein de l'unité. Ils organisent les portions temporelles dans lesquelles les notes, les prolongations ou les silences prennent place ; ils ne sont pas eux-mêmes des événements sonores.
 
-Autre exemple confirmé :
-- `|d.:::|` : la note `d` occupe la première moitié de l'unité (une croche si l'unité vaut un temps de noire) ; la seconde moitié et les unités restantes sont silencieuses.
+### Exemple détaillé
 
-### Plusieurs notes dans une même unité
+Exemple complet :
 
-Lorsque plusieurs notes sont écrites directement dans une unité, sans séparateur entre elles, la durée de cette unité est répartie également entre ces notes.
+```text
+| d,d .d ,d : d.,d ! d,-.d : d.d |
+```
 
-Exemples de principe :
-- `:dd:` : deux notes se partagent l'unité en deux parts égales.
-- `:ddd:` : trois notes se partagent l'unité en trois parts égales.
-- `:dddd:` : quatre notes se partagent l'unité en quatre parts égales.
-- `:dddddd:` : six notes se partagent l'unité en six parts égales.
+Pour expliquer la lecture, considérons les quatre unités de cette mesure en 4/4 séparément. Le séparateur `!` marque la séparation des groupes de la mesure ; il ne crée ni note ni durée supplémentaire.
 
-Cette règle de lecture compacte est retenue pour la saisie décrite. Elle ne signifie pas que la notation Sol-fa traditionnelle définit une règle générale pour toute division possible.
+**Unité 1 : `d,d .d ,d`**
 
-### Triolets et sextolets
+Les quatre notes se partagent l'unité en quatre parts égales. Chaque note dure `1/4` d'unité.
 
-Les écritures avec séparateurs peuvent être utilisées, par exemple :
-- Triolet : `:d.d.d:`.
-- Sextolet : `:,,.,,:` (notation fournie comme exemple par l'utilisateur).
+```text
+[d: 1/4] [d: 1/4] [d: 1/4] [d: 1/4]
+```
 
-Ces écritures peuvent être visuellement lourdes. Pour le rendu de la partition, un groupe peut être présenté sans séparateurs entre les notes et identifié par une courbe au-dessus, comme dans la notation musicale usuelle. La forme de rendu n'est pas nécessairement la syntaxe de saisie ni la structure interne.
+**Unité 2 : `d.,d`**
 
+La première note occupe la première moitié de l'unité, soit `1/2`. La portion suivante est un silence de `1/4`, puis la dernière note occupe le dernier `1/4`.
+
+```text
+[d: 1/2] [silence: 1/4] [d: 1/4]
+```
+
+**Unité 3 : `d,-.d`**
+
+La première note commence sur une portion de `1/4`, puis le signe de prolongation `-` la maintient pendant `1/2` supplémentaire. Sa durée totale est donc `3/4` d'unité. La deuxième note occupe le dernier `1/4`.
+
+```text
+[d prolongé : 1/4 + 1/2 = 3/4] [d: 1/4]
+```
+
+**Unité 4 : `d.d`**
+
+Le point divise l'unité en deux moitiés égales. Chaque note dure `1/2` unité.
+
+```text
+[d: 1/2] [d: 1/2]
+```
+
+Ces quatre lectures constituent un exemple de référence pour éviter de confondre les signes de division, les événements sonores et les durées obtenues.
+
+### Silences dans une subdivision binaire
+
+Une portion temporelle qui ne contient ni note ni prolongation est un silence. Il n'est pas nécessaire d'ajouter un symbole autonome de silence : sa position et sa durée sont déterminées par la structure de subdivision.
+
+Exemples confirmés :
+
+- `|d.,d|` : une note de `1/2`, un silence de `1/4`, puis une note de `1/4`.
+- `|.d::|` : début de l'unité silencieux, puis note sur la seconde moitié ; l'utilisateur décrit cette figure comme un contretemps.
+- `|d,.d:|` : quatre subdivisions égales : Do sur la première, silence sur la deuxième et la troisième, puis Do sur la quatrième.
+
+### Juxtaposition de notes sans séparateur
+
+Lorsque plusieurs notes sont écrites directement dans une même unité, sans séparateur entre elles, l'unité est répartie également entre ces notes.
+
+Exemples :
+
+- `:dd:` : deux notes, chacune de `1/2` unité.
+- `:ddd:` : trois notes, chacune de `1/3` d'unité.
+- `:dddd:` : quatre notes, chacune de `1/4` d'unité.
+- `:ddddd:` : cinq notes, chacune de `1/5` d'unité.
+
+Cette règle décrit la répartition égale par juxtaposition. Elle ne doit pas être confondue avec l'écriture des subdivisions binaires au moyen du point et de la virgule.
+
+### Périmètre : divisions non binaires traitées séparément
+
+La présente section documente uniquement la division binaire par le point et la virgule, ainsi que la répartition égale par juxtaposition telle qu'elle vient d'être décrite.
+
+Les divisions non binaires, notamment les triolets, sextolets et autres répartitions en trois, cinq, six parts ou davantage, feront l'objet d'une analyse distincte. Leurs règles de notation, leur rapport à l'unité et leur syntaxe exacte ne sont pas définis ici. Aucun comportement ne doit être déduit automatiquement de la seule présence de plusieurs notes ou de séparateurs.
+
+En particulier, les exemples de groupes non binaires ne doivent pas être utilisés pour modifier ou généraliser la règle binaire exposée ci-dessus.
+ 
 ## 4. Prolongation : `-`
 
 Le symbole `-` prolonge la note qui le précède. La note continue de sonner pendant la durée couverte par la prolongation.
