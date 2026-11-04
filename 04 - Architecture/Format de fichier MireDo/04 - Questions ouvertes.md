@@ -81,6 +81,8 @@ Un changement de signature et un changement de tempo sont deux informations dist
 
 ## 8. Mise en page et ressources
 
+- [ ] Comment proposer dans l'éditeur le choix entre saisie compacte et saisie explicite, sans en faire deux logiques musicales distinctes ?
+- [ ] Quelles visualisations permettront de présenter une même structure musicale sous différentes formes sans modifier son interprétation ?
 - [ ] Les préférences de présentation seront-elles enregistrées dans le fichier natif ou dans un profil séparé ?
 - [ ] Comment représenter les groupes de portées, les crochets, les clés affichées et la position des paroles ?
 - [ ] Les retours de système et sauts de page manuels seront-ils stockés comme indications de mise en page ?
