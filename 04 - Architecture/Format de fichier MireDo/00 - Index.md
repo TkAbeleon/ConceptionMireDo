@@ -11,15 +11,18 @@ Ce dossier étudie la proposition d'un conteneur JSON, la compare aux règles mu
 - [[03 - Modèle logique initial]] — première organisation des données, explicitement provisoire et précisée par les décisions de conception confirmées.
 - [[04 - Questions ouvertes]] — décisions nécessaires avant de stabiliser un schéma.
 
-## État actuel de la conception rythmique
+## État actuel de la conception temporelle
 
-Les décisions déjà confirmées portent sur la hiérarchie temporelle (mesure commune → voix → unité → subdivision → événement), les durées exactes sous forme de fractions, la conservation des segments de prolongation avec une durée totale calculée, et le périmètre du socle rythmique.
+Deux références complémentaires sont désormais validées :
 
-**L'unité temporelle de référence des fractions reste non décidée.** La noire et l'unité native Tonic Sol-fa sont comparées dans [[04 - Questions ouvertes]].
+- **Structure des durées :** fractions exactes exprimées par rapport à l'unité native Tonic Sol-fa délimitée par `:`.
+- **Définition du tempo :** noire par minute (`♩ = valeur`), avec un tempo initial dans le contexte musical et les changements associés à leur position dans la chronologie commune.
+
+La noire n'est donc pas l'unité qui structure les subdivisions Sol-fa ; l'unité native Sol-fa ne remplace pas la référence conventionnelle du tempo.
 
 ## Périmètre
 
-Le format devra pouvoir représenter une partition, pas seulement une suite de notes. Il devra tenir compte des voix, de la hauteur, du rythme, des mesures, des paroles, des accords, des indications musicales, des reprises et des informations nécessaires à la mise en page.
+Le format devra pouvoir représenter une partition, pas seulement une suite de notes. Il devra tenir compte des voix, de la hauteur, du rythme, des mesures, du tempo, des paroles, des accords, des indications musicales, des reprises et des informations nécessaires à la mise en page.
 
 Le format ne doit toutefois pas inventer de convention musicale. Il enregistre les choix du compositeur et les règles déjà définies.
 
