@@ -97,3 +97,13 @@ Dans les deux présentations, les paroles restent uniques et sont alignées avec
 Dans certains passages chorals, une voix peut avoir un texte différent ou avancer indépendamment des autres voix (comme cela peut se présenter dans le *Hallelujah* de Haendel). Dans ce cas, les paroles propres à cette voix sont placées directement sous sa portée.
 
 Cette disposition peut être utilisée ponctuellement pour une ou plusieurs voix concernées, tandis que les autres voix conservent leur disposition de paroles commune. Elle ne constitue pas le mode général par défaut : elle répond aux besoins du passage musical.
+
+### Soulignement des notes portant une même syllabe
+
+Lorsqu'une même syllabe des paroles est chantée sur plusieurs notes successives d'une voix, le compositeur peut souligner toutes les notes correspondant à cette syllabe.
+
+Exemple : dans `d(a) r d t d(men)`, les quatre notes `d r d t` portent la syllabe « a » ; elles sont donc toutes soulignées. La dernière note porte la syllabe « men » et n'appartient pas à ce groupe.
+
+Le soulignement est une indication éditoriale explicite : il est défini et placé par le compositeur. MireDo ne doit pas le déduire automatiquement de la présence d'une syllabe ou d'une succession de notes.
+
+Cette indication s'applique uniquement à la voix concernée. Si une autre voix ne présente pas la même situation syllabique, ses notes ne sont pas soulignées pour cette raison. Le soulignement ne modifie ni la hauteur ni la durée des notes ; il indique seulement que plusieurs notes successives sont chantées sur une même syllabe.
