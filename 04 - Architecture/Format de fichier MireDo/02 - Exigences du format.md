@@ -71,9 +71,9 @@ Le futur modèle doit pouvoir représenter les conventions existantes :
 - mesures délimitées ;
 - unités séparées par `:` ;
 - regroupements indiqués par `!` ;
-- subdivisions avec `.` et `,` ;
-- parties vides représentant des silences ;
-- plusieurs notes dans une unité ;
+- subdivisions explicites avec `.` et `,` ;
+- parties vides représentant des silences lorsque la structure de division explicite les permet ;
+- répartition implicite égale des notes et des prolongations lorsqu'aucun signe de division explicite n'est présent : chaque note et chaque `-` compte pour un élément de même durée, et leur somme remplit l'unité ;
 - groupes rythmiques spécifiés ;
 - prolongations `-` ;
 - anacrouses et séparateurs au début d'un passage ;
@@ -115,6 +115,10 @@ Les accords ne remplacent jamais les notes. Les indications de transition ne son
 ## 8. Contenu musical et présentation visuelle
 
 Le fichier doit distinguer les faits musicaux de leur présentation :
+
+- le choix d'une saisie compacte ou explicite est une modalité d'interaction avec l'éditeur, pas une règle musicale supplémentaire ;
+- les différents modes de visualisation doivent présenter une même structure musicale sans en modifier les durées, les événements ou l'interprétation ;
+- une préférence de saisie ou de visualisation ne doit pas créer une seconde logique rythmique ni remplacer les données musicales canoniques ;
 
 - le crochet peut être affiché ou masqué sans modifier la musique ;
 - les clés ou références de portée ne doivent pas modifier la graphie Sol-fa ;
