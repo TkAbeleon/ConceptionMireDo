@@ -169,6 +169,19 @@ La distinction entre saisie compacte et saisie explicite, ainsi que les formes d
 
 La présente section documente la division binaire par le point et la virgule, ainsi que la répartition implicite égale des notes et des prolongations en l'absence de signe de division explicite.
 
+### Portée de la courbe de groupement
+
+Lorsqu'une courbe est tracée au-dessus d'un groupe rythmique, elle couvre l'intégralité du fragment de notation Sol-fa auquel ce groupement s'applique. Elle ne se limite pas aux seules attaques des notes : les signes de prolongation situés dans le fragment font partie de la portée de la courbe.
+
+La courbe est une indication graphique de groupement. Les parenthèses utilisées dans les exemples explicatifs ci-dessous servent uniquement à montrer visuellement le fragment couvert ; elles ne sont pas des caractères de la notation Sol-fa et ne constituent pas une syntaxe de saisie.
+
+Exemples de portée :
+
+- Fragment explicatif `(d.-.d)` : la courbe couvre tout le fragment `d.-.d`, y compris la prolongation `-`.
+- Fragment explicatif `(d.d.d)` : la courbe couvre les trois notes du fragment `d.d.d`.
+
+Cette règle de portée s'applique de la même manière aux courbes des triolets, des sextolets et des autres groupes concernés. Elle décrit ce que la courbe englobe visuellement ; elle ne définit pas à elle seule la syntaxe ni le calcul temporel des divisions non binaires.
+
 Les divisions non binaires, notamment les triolets, sextolets et autres répartitions en trois, cinq, six parts ou davantage, feront l'objet d'une analyse distincte. Leurs règles de notation, leur rapport à l'unité et leur syntaxe exacte ne sont pas définis ici. Aucun comportement ne doit être déduit automatiquement de la seule présence de plusieurs notes ou de séparateurs.
 
 En particulier, les exemples de groupes non binaires ne doivent pas être utilisés pour modifier ou généraliser la règle binaire exposée ci-dessus.
