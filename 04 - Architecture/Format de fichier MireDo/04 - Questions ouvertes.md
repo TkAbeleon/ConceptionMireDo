@@ -33,6 +33,8 @@ Aucune question de cette page n'est considérée comme décidée par le seul fai
 
 ## 5. Notes et rythme
 
+- [ ] Définir séparément les divisions non binaires (notamment triolets et sextolets), leur syntaxe Sol-fa exacte et leur rapport temporel à l'unité. La documentation actuelle ne couvre que la division binaire par le point et la virgule, ainsi que la répartition égale par juxtaposition ; ne pas extrapoler ces règles aux groupes non binaires.
+
 - [ ] Une première version conservera-t-elle les fragments de notation Sol-fa comme chaînes, ou utilisera-t-elle immédiatement des jetons structurés ?
 - [ ] Comment représenter les subdivisions et les silences non encore spécifiés par la conception ?
 - [ ] Comment conserver les formes rares et la graphie exacte des notes ?
