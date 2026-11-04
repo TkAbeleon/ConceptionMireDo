@@ -38,9 +38,31 @@ Lorsque la partition comporte plusieurs voix :
 - Les portées sont disposées les unes sous les autres.
 - Les barres de mesure sont alignées et se prolongent verticalement à travers l'ensemble des portées, comme dans une partition classique.
 - Un crochet relie les portées au début de chaque ligne de système, comme en solfège classique.
-- Ce crochet est affiché par défaut. L'utilisateur peut toutefois choisir de le masquer.
+- Le crochet est affiché par défaut. L'utilisateur peut toutefois choisir de le masquer.
 
 Cette présentation s'applique à l'ensemble des voix de la partition.
+
+### Crochet, barre initiale et continuité entre les systèmes
+
+Le crochet et les barres verticales de début et de fin de système sont des éléments distincts.
+
+Lorsque le crochet est masqué :
+
+- Si le système commence normalement sur le premier temps de la mesure, une barre verticale initiale remplace le crochet.
+- Si le système commence par une anacrouse, c'est-à-dire sans attaque sur le premier temps, aucune barre verticale initiale supplémentaire n'est ajoutée. Le séparateur musical réellement nécessaire au début du système est conservé.
+- Si le système reprend au milieu d'une mesure, aucune barre initiale supplémentaire n'est ajoutée. Le séparateur qui précédait la première unité reprise (`:` ou `!`, selon l'écriture) reste visible.
+- Chaque ligne de système se termine toujours par une barre verticale de fermeture, même lorsque le retour à la ligne intervient au milieu d'une mesure.
+
+La barre de fermeture d'une ligne ne remplace pas le séparateur musical du début de la ligne suivante. La mise en page ne doit ni supprimer ce séparateur, ni le remplacer automatiquement par une barre initiale.
+
+Exemple schématique lorsque le crochet est masqué :
+
+```text
+|d:d:d.|
+.r|d:d:d|
+```
+
+Le début `.r` reste écrit comme tel ; aucune barre initiale supplémentaire ne le précède.
 
 ## 5. Principes à respecter
 
@@ -50,7 +72,7 @@ Cette présentation s'applique à l'ensemble des voix de la partition.
 - En mode Sol-fa, la sélection numérique est la représentation destinée à l'utilisateur.
 - En mode avancé, les clés peuvent être présentées avec leur notation classique.
 - MireDo doit conserver une séparation entre le nom de la voix, sa référence de portée et sa hauteur de registre. Ces propriétés ne doivent pas être confondues.
-- Pour une partition à plusieurs voix, les barres de mesure traversent toutes les portées et le crochet de système est visible par défaut, avec une option pour le masquer.
+- Pour une partition à plusieurs voix, les barres de mesure traversent toutes les portées et le crochet de système est visible par défaut, avec une option pour le masquer ; les règles de barre initiale, de séparateur conservé et de fermeture de ligne restent applicables lorsque le crochet est masqué.
 
 ## 6. Mise en page : systèmes, retours à la ligne et pages
 
