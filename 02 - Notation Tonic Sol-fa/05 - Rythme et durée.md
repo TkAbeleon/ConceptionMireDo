@@ -178,11 +178,11 @@ Un groupe non binaire répartit une unité native Sol-fa complète en un nombre 
 - Le sextolet comporte six positions rythmiques égales.
 - Les six positions occupent ensemble exactement une unité native Sol-fa.
 - Chaque position représente donc un sixième de cette unité.
-- La forme de notation communiquée pour le sextolet est ` :,,.,,: ` (sans les espaces ajoutés ici autour des délimiteurs).
+- La forme de notation communiquée pour le sextolet est `:,,.,,:`.
 
 Dans ces groupes, une position occupée par `-` prolonge la note précédente au lieu de produire une nouvelle attaque. Elle compte néanmoins comme une position du groupe et conserve sa part de durée. Le nombre de positions du groupe reste donc trois pour un triolet et six pour un sextolet, même lorsque certaines positions sont des prolongations.
 
-La courbe de groupement couvre le fragment complet du groupe, prolongations comprises, conformément à la règle de portée définie ci-dessus.
+La courbe de groupement couvre le fragment complet du groupe, prolongations comprises, conformément à la règle de portée de la courbe de groupement.
 
 Ces règles définissent la répartition temporelle du triolet et du sextolet dans l'unité Sol-fa. Elles ne doivent pas être interprétées à partir des valeurs de notes du solfège classique : l'unité de référence reste l'unité native Sol-fa.
 
