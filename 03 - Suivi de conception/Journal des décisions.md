@@ -68,3 +68,11 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Décision :** Sol-fa est le système utilisé par défaut lorsqu'aucun autre système n'est sélectionné. D'autres systèmes déjà définis, par exemple le solfège, peuvent être sélectionnés pour une partition.
 - **Précision :** les règles d'un système ne doivent pas être imposées à un autre système.
 - **Statut :** validé.
+## 2026-11-04 — Crochet et délimitation des systèmes
+
+- **Décision :** le crochet reliant les portées est affiché par défaut ; l'utilisateur peut le masquer.
+- **Décision :** lorsque le crochet est masqué et que le système commence normalement sur le premier temps, une barre verticale initiale le remplace.
+- **Décision :** lorsqu'un système commence par une anacrouse ou au milieu d'une mesure, aucune barre initiale supplémentaire n'est ajoutée ; le séparateur musical correspondant est conservé.
+- **Décision :** chaque ligne de système se termine toujours par une barre verticale de fermeture, y compris lorsqu'elle se termine au milieu d'une mesure.
+- **Précision :** la barre de fermeture d'une ligne ne remplace pas le séparateur qui ouvre la continuité musicale au début du système suivant.
+- **Statut :** validé par l'utilisateur.
