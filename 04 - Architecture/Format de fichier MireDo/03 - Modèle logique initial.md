@@ -257,7 +257,18 @@ Le premier modèle se concentre sur les unités, subdivisions, notes, silences, 
 
 Les indications supplémentaires telles que D.C., D.S., nuances, crescendo/diminuendo et articulations sont reportées à une étape ultérieure. Le tempo initial et ses changements font exception : ils sont nécessaires au contexte temporel de la partition et font partie du modèle de base.
 
-### 8.6 Points encore ouverts
+### 8.6 Saisie et visualisation — séparation conceptuelle
+
+La notation source et la structure musicale interprétée doivent rester indépendantes des modalités d'interaction de l'éditeur.
+
+- Une saisie compacte peut exploiter la répartition implicite des notes et prolongations décrite dans la documentation Tonic Sol-fa.
+- Une saisie explicite peut permettre de travailler directement avec les subdivisions et les portions silencieuses représentables par cette notation.
+- Plusieurs visualisations peuvent présenter une même structure musicale sans en changer les durées ni les événements.
+- Le choix du mode de saisie ou de visualisation ne doit pas devenir un paramètre qui modifie les règles rythmiques internes.
+
+Les modalités concrètes de ces modes, leur ergonomie et la conservation éventuelle des préférences dans le fichier ou dans un profil utilisateur restent à concevoir. Ce passage fixe une séparation de responsabilités, pas une interface ni un schéma de données définitif.
+
+## 8.6 Points encore ouverts
 
 - La nécessité et la forme d'identifiants stables pour les événements.
 - La forme finale de sérialisation et le schéma JSON.
