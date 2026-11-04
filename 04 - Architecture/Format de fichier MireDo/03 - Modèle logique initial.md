@@ -137,7 +137,7 @@ La proposition initiale utilise successivement 4/4, 3/4 et 2/4.
 
 L'exemple JSON ci-dessus conserve une signature 4/4 commune parce que c'est le cas actuellement représenté par les règles de conception générales et le Studio.
 
-Une future version du modèle pourrait prévoir une surcharge de signature au niveau d'une mesure ou d'une section. Ce champ ne doit cependant être activé comme comportement musical qu'après décision explicite dans [[04 - Questions ouvertes]] et mise à jour des règles de rythme.
+Une future version du modèle pourrait prévoir une surcharge de signature au niveau d'une mesure ou d'une section. Ce champ ne doit cependant pas être activé comme comportement musical qu'après décision explicite dans [[04 - Questions ouvertes]] et mise à jour des règles de rythme.
 
 Si les signatures variables sont validées, la mesure qui change de signature devra porter une seule valeur commune à toutes les voix, jamais une valeur indépendante dans chaque voix.
 
@@ -168,3 +168,52 @@ Le Studio contient déjà un modèle d'exécution `Score` qui distingue :
 - `structure`, `chords`, `lyrics` et `breaks` : annotations et mise en page.
 
 Ce modèle est utile pour identifier les besoins, mais il n'est pas encore un modèle de fichier natif : les Maps, identifiants internes, diagnostics et données calculées devront être examinés avant de décider ce qui est sérialisé.
+
+## 7. Décisions de conception confirmées le 2026-11-04
+
+Les décisions suivantes précisent le modèle logique sans constituer un schéma JSON définitif.
+
+### 7.1 Hiérarchie temporelle
+
+Le contenu rythmique doit conserver une organisation hiérarchique explicite :
+
+```text
+Partition
+└── Mesure commune
+    └── Voix dans la mesure
+        └── Unité
+            └── Subdivision
+                └── Événement
+```
+
+Cette hiérarchie est préférée à une représentation initiale qui aplatirait immédiatement toute la partition en une seule liste chronologique de notes. Elle doit permettre de préserver l'organisation visible et musicale de la notation Tonic Sol-fa.
+
+### 7.2 Durées exactes
+
+Les durées seront représentées par des fractions exactes. Le modèle ne doit pas dépendre de nombres flottants approximatifs pour exprimer les durées musicales.
+
+La référence de ces fractions reste toutefois à choisir : la noire et l'unité native Tonic Sol-fa sont encore en discussion. Le modèle ne doit donc pas présumer que l'une de ces deux références est déjà adoptée.
+
+### 7.3 Notes et prolongations
+
+Une note disposera d'une durée totale calculée, incluant ses éventuelles prolongations. En parallèle, la structure conservera les segments d'origine qui composent cette prolongation.
+
+Cette double information a deux rôles distincts :
+- la durée totale sert aux calculs, à la synchronisation et à la lecture ;
+- les segments d'origine préservent la structure de notation et permettent de reconstruire fidèlement l'écriture.
+
+Il ne s'agit pas de deux durées indépendantes modifiables séparément : la durée totale est cohérente avec les segments qui la composent.
+
+### 7.4 Périmètre du socle rythmique
+
+Le premier modèle se concentre sur les unités, subdivisions, notes, silences, groupes rythmiques et prolongations.
+
+Les indications supplémentaires — notamment D.C., D.S., nuances, tempo, crescendo/diminuendo et articulations — sont volontairement reportées à une étape ultérieure. Elles ne doivent pas compliquer la définition du socle rythmique.
+
+### 7.5 Points non décidés
+
+- L'unité temporelle de référence des fractions n'est pas encore choisie.
+- La nécessité et la forme d'identifiants stables pour les événements n'ont pas encore été décidées.
+- La forme finale de sérialisation et le schéma JSON ne sont pas définis.
+
+Ces points restent dans [[04 - Questions ouvertes]].
