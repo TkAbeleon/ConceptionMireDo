@@ -60,7 +60,7 @@ MireDo ne doit pas confondre la signature de mesure avec la disposition choisie 
 
 ## 3. Subdivisions à l'intérieur d'une unité
 
-Les subdivisions décrites dans cette section se font à l'intérieur d'une unité délimitée par `:`. Il faut distinguer la division binaire, traitée ici, des divisions non binaires, qui ne sont pas encore spécifiées et seront étudiées séparément.
+Les subdivisions décrites dans cette section se font à l'intérieur d'une unité délimitée par `:`. La division binaire, la répartition implicite et certains groupes non binaires sont documentés séparément.
 
 ### Division binaire : point `.` et virgule `,`
 
@@ -165,9 +165,26 @@ Cette répartition implicite est distincte de la division explicitement marquée
 
 La distinction entre saisie compacte et saisie explicite, ainsi que les formes de visualisation proposées par l'éditeur, relève de l'interface. Ces choix ne doivent pas modifier la règle musicale ni créer une logique rythmique interne différente.
 
-### Périmètre : divisions non binaires traitées séparément
+### Groupes non binaires : triolet et sextolet
 
-La présente section documente la division binaire par le point et la virgule, ainsi que la répartition implicite égale des notes et des prolongations en l'absence de signe de division explicite.
+Un groupe non binaire répartit une unité native Sol-fa complète en un nombre déterminé de positions égales. Le groupe ne change pas la durée de l'unité : il en organise seulement la répartition interne.
+
+**Triolet**
+- Le triolet comporte trois positions rythmiques égales.
+- Les trois positions occupent ensemble exactement une unité native Sol-fa.
+- Chaque position représente donc un tiers de cette unité.
+
+**Sextolet**
+- Le sextolet comporte six positions rythmiques égales.
+- Les six positions occupent ensemble exactement une unité native Sol-fa.
+- Chaque position représente donc un sixième de cette unité.
+- La forme de notation communiquée pour le sextolet est ` :,,.,,: ` (sans les espaces ajoutés ici autour des délimiteurs).
+
+Dans ces groupes, une position occupée par `-` prolonge la note précédente au lieu de produire une nouvelle attaque. Elle compte néanmoins comme une position du groupe et conserve sa part de durée. Le nombre de positions du groupe reste donc trois pour un triolet et six pour un sextolet, même lorsque certaines positions sont des prolongations.
+
+La courbe de groupement couvre le fragment complet du groupe, prolongations comprises, conformément à la règle de portée définie ci-dessus.
+
+Ces règles définissent la répartition temporelle du triolet et du sextolet dans l'unité Sol-fa. Elles ne doivent pas être interprétées à partir des valeurs de notes du solfège classique : l'unité de référence reste l'unité native Sol-fa.
 
 ### Portée de la courbe de groupement
 
@@ -182,9 +199,7 @@ Exemples de portée :
 
 Cette règle de portée s'applique de la même manière aux courbes des triolets, des sextolets et des autres groupes concernés. Elle décrit ce que la courbe englobe visuellement ; elle ne définit pas à elle seule la syntaxe ni le calcul temporel des divisions non binaires.
 
-Les divisions non binaires, notamment les triolets, sextolets et autres répartitions en trois, cinq, six parts ou davantage, feront l'objet d'une analyse distincte. Leurs règles de notation, leur rapport à l'unité et leur syntaxe exacte ne sont pas définis ici. Aucun comportement ne doit être déduit automatiquement de la seule présence de plusieurs notes ou de séparateurs.
-
-En particulier, les exemples de groupes non binaires ne doivent pas être utilisés pour modifier ou généraliser la règle binaire exposée ci-dessus.
+Les autres divisions non binaires, au-delà du triolet et du sextolet, restent à définir. Aucun comportement ne doit être déduit automatiquement de la seule présence de plusieurs notes ou de séparateurs. Les règles du triolet et du sextolet ne modifient pas la règle binaire exposée ci-dessus.
  
 ## 4. Prolongation : `-`
 
@@ -240,7 +255,7 @@ Pour les divisions non spécifiées, la syntaxe et le rendu restent à décider 
 Les points suivants ne sont pas encore suffisamment déterminés pour être considérés comme des règles validées :
 
 - La syntaxe exacte des silences dans toutes les subdivisions.
-- La lecture précise des exemples de prolongation ou de silence à l'intérieur des groupes non binaires, notamment `|d.-.d:|` et `:d..d:`. La répartition implicite `:d-d:` est désormais définie dans la section 3.
+- La lecture détaillée des exemples combinant groupes non binaires, prolongations et silences, notamment `|d.-.d:|` et `:d..d:`, afin de préciser les cas qui ne sont pas couverts par la règle générale des positions égales.
 - La convention de saisie et de rendu des divisions qui ne sont pas définies par la notation Sol-fa.
 - Les symboles précis et la syntaxe de saisie des nuances, du point d'orgue et des autres indications musicales.
 - Les autres signatures et regroupements qui n'ont pas encore été explicitement validés.
