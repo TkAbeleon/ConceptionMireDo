@@ -59,7 +59,7 @@ La mise en page suit les conventions habituelles des logiciels de notation music
 ### Retours à la ligne
 
 - Par défaut, une mesure entière qui ne tient pas dans la ligne est reportée au système suivant. MireDo ne coupe donc pas automatiquement une mesure pour la faire tenir dans l'espace restant.
-- Le compositeur peut toutefois imposer un retour à la ligne au milieu d'une mesure à l'aide de `/n`.
+- Le compositeur peut toutefois imposer manuellement un retour à la ligne à un emplacement précis, y compris au milieu d'une mesure.
 - Les portées d'un même système restent alignées et les mesures des différentes voix restent synchronisées.
 
 ### Sauts de page
@@ -68,5 +68,5 @@ MireDo prend également en charge les sauts de page :
 - saut automatique lorsque la mise en page nécessite une nouvelle page ;
 - possibilité d'insérer un saut de page manuel pour contrôler la présentation de la partition.
 
-Ces règles concernent la mise en page du document et ne modifient ni la structure musicale ni la durée des mesures. La syntaxe éventuelle d'un saut de page manuel sera précisée dans la conception technique.
+Ces règles concernent la mise en page du document et ne modifient ni la structure musicale ni la durée des mesures. La syntaxe des commandes de mise en page sera précisée dans la conception technique.
 
