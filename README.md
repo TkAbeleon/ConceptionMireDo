@@ -37,7 +37,8 @@ chaque document doit distinguer les éléments **validés**, **provisoires** et 
 
 | Domaine | État | Document |
 |---|---|---|
-| Hauteur et degrés Tonic Sol-fa | En cours de formalisation | [[02 - Notation Tonic Sol-fa/01 - Hauteur et degrés]] |
+| Hauteur et degrés Tonic Sol-fa | Règles de base définies | [[02 - Notation Tonic Sol-fa/01 - Hauteur et degrés]] |
+| Représentation numérique des hauteurs | Axe entier ℤ et références de portée validés | [[02 - Notation Tonic Sol-fa/05 - Représentation numérique des hauteurs]] |
 | Altérations chromatiques | Règles partielles validées | [[02 - Notation Tonic Sol-fa/02 - Altérations chromatiques]] |
 | Octaves | Convention numérique définie, rendu à préciser | [[02 - Notation Tonic Sol-fa/03 - Octaves et représentation]] |
 | Référence tonale et mode majeur/mineur | Principe de dépendance à la partition validé | [[02 - Notation Tonic Sol-fa/04 - Référence tonale et mode]] |
@@ -64,6 +65,7 @@ chaque document doit distinguer les éléments **validés**, **provisoires** et 
 - **2026-11-03** — Création de la structure documentaire Obsidian et séparation de la première conception historique.
 - **2026-11-03** — Formalisation initiale des conventions Tonic Sol-fa : degrés, altérations, octaves et référence tonale.
 - **2026-11-04** — Validation des règles de crochet, de barre initiale, de séparateur conservé et de barre de fermeture des systèmes.
+- **2026-11-04** — Validation de l'axe chromatique entier ℤ, de la conversion des graphies par l'éditeur et des références numériques de portée par voix.
 - **2026-11-04** — Ouverture du dossier de conception du format natif MireDo ; analyse d'une proposition JSON et définition d'un premier modèle logique provisoire.
 
 ## Comment contribuer à la conception
