@@ -39,6 +39,44 @@ Aucune question de cette page n'est considérée comme décidée par le seul fai
 - [ ] Quels champs seront calculés à l'ouverture plutôt qu'enregistrés ?
 - [ ] Comment les groupes rythmiques et les prolongations seront-ils reliés aux unités et mesures ?
 
+### 5.1 Unité temporelle de référence — décision ouverte
+
+**Statut : non décidé.** Deux options sont étudiées pour exprimer les fractions exactes de durée dans le modèle logique.
+
+#### Option A — La noire comme unité de référence
+
+**Avantages :**
+- unité conventionnelle familière dans les logiciels de notation et les représentations musicales classiques ;
+- échanges et conversions potentiellement plus directs avec MIDI et les outils qui expriment les durées en noires ou fractions de noire ;
+- même unité de référence quelle que soit la signature rythmique.
+
+**Inconvénients :**
+- la durée de l'unité native Sol-fa doit être convertie avant d'être exprimée dans le modèle ;
+- la relation entre l'organisation écrite avec les séparateurs `:` et les durées stockées est moins immédiate ;
+- la conversion ajoute une étape conceptuelle et technique au traitement de la notation source.
+
+#### Option B — L'unité native Tonic Sol-fa comme unité de référence
+
+L'unité native désigne ici l'unité principale délimitée par `:`. Sa valeur dépend du dénominateur de la signature, conformément aux conventions documentées dans [[../../02 - Notation Tonic Sol-fa/05 - Rythme et durée]].
+
+**Avantages :**
+- correspondance directe entre la structure rythmique écrite et la hiérarchie du modèle ;
+- subdivisions et prolongations exprimables naturellement comme fractions d'une unité native ;
+- interprétation et inspection du modèle plus proches de la notation source Tonic Sol-fa.
+
+**Inconvénients :**
+- une même fraction n'a pas nécessairement la même durée absolue lorsque le dénominateur de la signature change ;
+- les échanges avec MIDI et les outils fondés sur la noire nécessitent une conversion ;
+- les opérations entre mesures de signatures différentes doivent tenir compte de la valeur réelle de l'unité native dans chaque contexte.
+
+#### Recommandation de conception — non approuvée
+
+La recommandation actuelle est de retenir l'unité native Tonic Sol-fa comme référence structurelle du modèle, tout en prévoyant une conversion exacte vers la noire pour les échanges externes.
+
+Cette approche privilégie la fidélité à la notation que MireDo doit représenter, sans empêcher l'interopérabilité. Elle ne devient pas une décision tant que l'utilisateur ne l'a pas explicitement confirmée.
+
+**Question à trancher :** les fractions exactes de durée doivent-elles être exprimées par rapport à la noire ou par rapport à l'unité native Tonic Sol-fa ?
+
 ## 6. Référence tonale et hauteur
 
 - [ ] Comment représenter les changements de référence tonale à une position précise ?
