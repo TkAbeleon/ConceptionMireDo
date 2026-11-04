@@ -50,10 +50,10 @@ Lorsque le crochet est masqué :
 
 - Si le système commence normalement sur le premier temps de la mesure, une barre verticale initiale remplace le crochet.
 - Si le système commence par une anacrouse, c'est-à-dire sans attaque sur le premier temps, aucune barre verticale initiale supplémentaire n'est ajoutée. Le séparateur musical réellement nécessaire au début du système est conservé.
-- Si le système reprend au milieu d'une mesure, aucune barre initiale supplémentaire n'est ajoutée. Le séparateur qui précédait la première unité reprise (`:` ou `!`, selon l'écriture) reste visible.
+- Si le système reprend au milieu d'une mesure, aucune barre initiale supplémentaire n'est ajoutée. Le séparateur qui précédait la première unité reprise (`:`, `!` ou `||`, selon l'écriture) reste visible.
 - Chaque ligne de système se termine toujours par une barre verticale de fermeture, même lorsque le retour à la ligne intervient au milieu d'une mesure.
 
-La barre de fermeture d'une ligne ne remplace pas le séparateur musical du début de la ligne suivante. La mise en page ne doit ni supprimer ce séparateur, ni le remplacer automatiquement par une barre initiale.
+La barre de fermeture d'une ligne ne remplace pas le séparateur musical du début de la ligne suivante. Si le séparateur suivant est `||`, la ligne précédente se ferme par une barre simple et la double barre reste au début de la ligne suivante. La mise en page ne doit ni supprimer ce séparateur, ni le remplacer automatiquement par une barre initiale.
 
 Exemple schématique lorsque le crochet est masqué :
 
