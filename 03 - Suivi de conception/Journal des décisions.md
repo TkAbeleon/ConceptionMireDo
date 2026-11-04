@@ -68,6 +68,17 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Décision :** Sol-fa est le système utilisé par défaut lorsqu'aucun autre système n'est sélectionné. D'autres systèmes déjà définis, par exemple le solfège, peuvent être sélectionnés pour une partition.
 - **Précision :** les règles d'un système ne doivent pas être imposées à un autre système.
 - **Statut :** validé.
+## 2026-11-04 — Représentation numérique des hauteurs et références de portée
+
+- **Décision :** les hauteurs sont représentées sur un axe chromatique entier continu, de valeurs appartenant à ℤ, sans borne théorique inférieure ni supérieure.
+- **Décision :** la valeur `0` est la référence ; chaque demi-ton vers l'aigu ajoute `1` et chaque demi-ton vers le grave soustrait `1`.
+- **Décision :** l'éditeur interprète les graphies Sol-fa saisies et les convertit en équivalents numériques. Le compositeur continue à saisir les graphies musicales, pas les nombres.
+- **Décision :** les autres composants exploitent les valeurs numériques produites par l'éditeur au lieu de réinterpréter chacun les graphies Sol-fa.
+- **Décision :** chaque voix possède une référence numérique de portée distincte de son nom et de sa tessiture. `0` correspond à la clé de Sol, `-1` à la clé de Fa ; les autres entiers suivent la même logique de position.
+- **Décision :** pour SATB par défaut, S et A utilisent la référence `0`, T et B la référence `-1`.
+- **Précision :** la graphie originale reste conservée séparément de l'équivalent numérique ; aucune normalisation enharmonique automatique n'est autorisée.
+- **Statut :** validé par l'utilisateur.
+
 ## 2026-11-04 — Crochet et délimitation des systèmes
 
 - **Décision :** le crochet reliant les portées est affiché par défaut ; l'utilisateur peut le masquer.
