@@ -140,3 +140,13 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Orientation d'architecture :** les choix de saisie compacte/explicite et de visualisation relèvent de l'éditeur et ne doivent pas modifier la logique musicale interne. Les modalités d'interface et de stockage des préférences restent à concevoir.
 - **Statut :** règle de répartition confirmée par l'utilisateur ; modalités d'interface encore à concevoir.
 
+
+## 2026-11-04 — Portée des courbes de groupement rythmique
+
+- **Décision :** une courbe de groupement couvre l'intégralité du fragment de notation Sol-fa auquel elle s'applique.
+- **Précision :** la courbe englobe également les signes de prolongation présents dans ce fragment ; elle ne s'arrête pas aux seules attaques des notes.
+- **Précision :** cette même règle de portée s'applique aux courbes des triolets, sextolets et autres groupes concernés.
+- **Précision :** les parenthèses dans les exemples explicatifs servent uniquement à matérialiser le fragment couvert. Elles ne font pas partie de la syntaxe Sol-fa.
+- **Exemples :** `(d.-.d)` indique que la courbe couvre tout `d.-.d`, prolongation comprise ; `(d.d.d)` indique que la courbe couvre les trois notes.
+- **Périmètre :** cette décision fixe la portée graphique de la courbe, sans prétendre définir la syntaxe ni le calcul temporel des groupes non binaires.
+- **Statut :** confirmé par l'utilisateur.
