@@ -121,3 +121,13 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Précision :** le tempo fait exception à ce report : le tempo initial et ses changements font partie du contexte temporel nécessaire à l'interprétation de la partition.
 - **Précision :** les autres indications pourront être conçues dans une étape ultérieure. Leur exclusion actuelle ne signifie pas qu'elles seront absentes du format natif final.
 - **Statut :** périmètre de conception validé par l'utilisateur.
+
+## 2026-11-04 — Clarification de la division binaire Tonic Sol-fa
+
+- **Précision :** le point `.` divise une unité en deux moitiés égales.
+- **Précision :** la virgule `,` subdivise en deux une moitié déjà obtenue par le point. Chaque portion ainsi obtenue vaut donc `1/4` de l'unité.
+- **Précision :** la division en quatre est le résultat de deux étapes successives ; la virgule ne divise pas directement l'unité entière en quatre.
+- **Exemple de référence :** `| d,d .d ,d : d.,d ! d,-.d : d.d |`. La documentation détaille les durées de chaque note, silence et prolongation dans les quatre unités.
+- **Périmètre :** cette clarification porte sur la division binaire uniquement. Les divisions non binaires, notamment les triolets et sextolets, seront analysées dans une étape ultérieure et ne doivent pas être déduites de cette règle.
+- **Statut :** clarification de la convention Tonic Sol-fa confirmée par l'utilisateur.
+
