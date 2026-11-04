@@ -27,6 +27,10 @@ Cette page centralise les questions qui nécessitent une décision explicite. El
 - [ ] Définir une représentation séparant la syllabe écrite, le degré, l'altération, le déplacement d'octave et la hauteur calculée.
 - [ ] Décider quelles informations sont nécessaires pour reconstituer exactement la graphie originale.
 
+## Format natif `.mrd`
+
+Les questions spécifiques au format de fichier sont suivies dans [[04 - Architecture/Format de fichier MireDo/04 - Questions ouvertes]]. Elles couvrent notamment le choix du conteneur JSON, la source de vérité, l'organisation des mesures et des voix, les signatures variables et la conservation sans perte de la notation écrite.
+
 ## Priorisation
 
 Les questions ci-dessus ne doivent pas bloquer les décisions fondamentales. Traiter d'abord les règles nécessaires au fonctionnement principal de MireDo ; reporter les détails et cas limites jusqu'à ce qu'ils deviennent pertinents pour une implémentation ou un test concret.
