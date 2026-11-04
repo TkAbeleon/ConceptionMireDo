@@ -36,10 +36,10 @@ Aucune question de cette page n'est considérée comme décidée par le seul fai
 - [ ] Définir séparément les divisions non binaires (notamment triolets et sextolets), leur syntaxe Sol-fa exacte et leur rapport temporel à l'unité. La documentation actuelle ne couvre que la division binaire par le point et la virgule, ainsi que la répartition égale par juxtaposition ; ne pas extrapoler ces règles aux groupes non binaires.
 
 - [ ] Une première version conservera-t-elle les fragments de notation Sol-fa comme chaînes, ou utilisera-t-elle immédiatement des jetons structurés ?
-- [ ] Comment représenter les subdivisions et les silences non encore spécifiés par la conception ?
+- [ ] Quelle représentation structurée conservera les divisions explicites et les portions silencieuses qu'elles délimitent ? La répartition implicite sans signe de division est définie : elle répartit l'unité entre notes et prolongations, sans possibilité d'y insérer un silence.
 - [ ] Comment conserver les formes rares et la graphie exacte des notes ?
 - [ ] Quels champs seront calculés à l'ouverture plutôt qu'enregistrés ?
-- [ ] Comment les groupes rythmiques et les prolongations seront-ils reliés aux unités et mesures ?
+- [ ] Comment les groupes rythmiques non binaires et les prolongations seront-ils reliés aux unités et mesures ? La règle de répartition implicite des notes et prolongations est documentée dans la référence Tonic Sol-fa.
 
 ### 5.1 Références temporelles — décisions validées
 
