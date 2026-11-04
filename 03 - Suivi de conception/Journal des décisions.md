@@ -68,6 +68,7 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Décision :** Sol-fa est le système utilisé par défaut lorsqu'aucun autre système n'est sélectionné. D'autres systèmes déjà définis, par exemple le solfège, peuvent être sélectionnés pour une partition.
 - **Précision :** les règles d'un système ne doivent pas être imposées à un autre système.
 - **Statut :** validé.
+
 ## 2026-11-04 — Représentation numérique des hauteurs et références de portée
 
 - **Décision :** les hauteurs sont représentées sur un axe chromatique entier continu, de valeurs appartenant à ℤ, sans borne théorique inférieure ni supérieure.
@@ -87,3 +88,25 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Décision :** chaque ligne de système se termine toujours par une barre verticale de fermeture, y compris lorsqu'elle se termine au milieu d'une mesure.
 - **Précision :** la barre de fermeture d'une ligne ne remplace pas le séparateur qui ouvre la continuité musicale au début du système suivant.
 - **Statut :** validé par l'utilisateur.
+
+## 2026-11-04 — Organisation temporelle du modèle de partition
+
+- **Décision :** le modèle logique conserve une hiérarchie temporelle explicite : partition → mesure commune → voix dans la mesure → unité → subdivision → événement.
+- **Décision :** le modèle ne réduit pas dès le départ toute la partition à une simple liste chronologique plate de notes.
+- **Décision :** les durées sont représentées par des fractions exactes afin d'éviter les approximations et les erreurs d'arrondi.
+- **Précision :** l'unité à laquelle ces fractions se rapportent n'est pas encore choisie. La noire et l'unité native Tonic Sol-fa restent deux options à examiner ; aucune n'est approuvée à ce stade.
+- **Statut :** validé pour la hiérarchie et l'exactitude des durées ; unité de référence non décidée.
+
+## 2026-11-04 — Représentation des prolongations dans le modèle
+
+- **Décision :** une note possède une durée totale calculée qui inclut ses prolongations.
+- **Décision :** les segments d'origine qui constituent cette prolongation restent également conservés dans la structure de notation.
+- **Précision :** cette combinaison permet de disposer d'une durée exploitable par les calculs tout en préservant la manière dont la durée a été écrite dans la notation source.
+- **Statut :** validé par l'utilisateur.
+
+## 2026-11-04 — Périmètre du premier modèle rythmique
+
+- **Décision :** le premier modèle se concentre sur les éléments fondamentaux du contenu rythmique : unités, subdivisions, notes, silences, groupes rythmiques et prolongations.
+- **Décision :** les indications supplémentaires telles que D.C., D.S., nuances, tempo, crescendo/diminuendo et articulations ne sont pas intégrées à ce socle initial.
+- **Précision :** ces éléments pourront être conçus dans une étape ultérieure. Leur exclusion actuelle ne signifie pas qu'ils seront absents du format natif final.
+- **Statut :** périmètre de conception validé par l'utilisateur.
