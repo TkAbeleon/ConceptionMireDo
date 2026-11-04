@@ -135,22 +135,39 @@ Exemples confirmés :
 - `|.d::|` : début de l'unité silencieux, puis note sur la seconde moitié ; l'utilisateur décrit cette figure comme un contretemps.
 - `|d,.d:|` : quatre subdivisions égales : Do sur la première, silence sur la deuxième et la troisième, puis Do sur la quatrième.
 
-### Juxtaposition de notes sans séparateur
+### Répartition implicite sans signe de division
 
-Lorsque plusieurs notes sont écrites directement dans une même unité, sans séparateur entre elles, l'unité est répartie également entre ces notes.
+Lorsqu'une unité ne contient aucun signe de division explicite (`.` ou `,`), sa durée est répartie également entre les éléments qui la composent. Le comptage porte à la fois sur les notes et sur les signes de prolongation `-` :
 
-Exemples :
+- chaque note compte pour un élément ;
+- chaque signe de prolongation compte également pour un élément ;
+- tous les éléments comptés ont la même durée ;
+- la somme des durées de ces éléments remplit exactement l'unité.
 
-- `:dd:` : deux notes, chacune de `1/2` unité.
-- `:ddd:` : trois notes, chacune de `1/3` d'unité.
-- `:dddd:` : quatre notes, chacune de `1/4` d'unité.
-- `:ddddd:` : cinq notes, chacune de `1/5` d'unité.
+La durée d'un élément est donc égale à la durée de l'unité divisée par le nombre total de notes et de signes de prolongation présents dans cette unité.
 
-Cette règle décrit la répartition égale par juxtaposition. Elle ne doit pas être confondue avec l'écriture des subdivisions binaires au moyen du point et de la virgule.
+Exemples, pour une unité de durée 1 :
+
+| Écriture | Éléments comptés | Durée de chaque élément | Durée totale des notes |
+|---|---:|---:|---|
+| `:dd:` | 2 notes | `1/2` | chaque note : `1/2` |
+| `:ddd:` | 3 notes | `1/3` | chaque note : `1/3` |
+| `:dddd:` | 4 notes | `1/4` | chaque note : `1/4` |
+| `:d-d:` | 2 notes + 1 prolongation | `1/3` | première note : `2/3` ; deuxième : `1/3` |
+| `:dd-:` | 2 notes + 1 prolongation | `1/3` | première note : `1/3` ; deuxième : `2/3` |
+| `:ddddd:` | 5 notes | `1/5` | chaque note : `1/5` |
+
+Dans `:d-d:`, la première note occupe un élément-note puis l'élément-prolongation qui la suit ; elle dure donc `2/3` de l'unité. Dans `:dd-:`, c'est la deuxième note qui est prolongée et dure `2/3` de l'unité.
+
+Cette répartition implicite est distincte de la division explicitement marquée par le point et la virgule. Elle ne doit pas être confondue non plus avec les divisions non binaires dont les conventions restent à préciser.
+
+**Limite concernant les silences :** dans ce mode de répartition implicite, tous les éléments comptés se partagent l'unité et la remplissent. Il n'est donc pas possible d'y insérer une portion silencieuse sans introduire une convention supplémentaire qui n'est pas définie ici. Pour représenter un silence, il faut recourir à une écriture dont la structure de division explicite laisse une portion vide.
+
+La distinction entre saisie compacte et saisie explicite, ainsi que les formes de visualisation proposées par l'éditeur, relève de l'interface. Ces choix ne doivent pas modifier la règle musicale ni créer une logique rythmique interne différente.
 
 ### Périmètre : divisions non binaires traitées séparément
 
-La présente section documente uniquement la division binaire par le point et la virgule, ainsi que la répartition égale par juxtaposition telle qu'elle vient d'être décrite.
+La présente section documente la division binaire par le point et la virgule, ainsi que la répartition implicite égale des notes et des prolongations en l'absence de signe de division explicite.
 
 Les divisions non binaires, notamment les triolets, sextolets et autres répartitions en trois, cinq, six parts ou davantage, feront l'objet d'une analyse distincte. Leurs règles de notation, leur rapport à l'unité et leur syntaxe exacte ne sont pas définis ici. Aucun comportement ne doit être déduit automatiquement de la seule présence de plusieurs notes ou de séparateurs.
 
@@ -176,7 +193,7 @@ Autre exemple fourni :
 
 Aucun symbole autonome de silence n'a été défini dans la convention décrite.
 
-Une subdivision ou une partie d'unité qui ne contient ni note ni signe de prolongation est silencieuse. Il faut distinguer :
+Une portion explicitement délimitée qui ne contient ni note ni prolongation est silencieuse. En revanche, la répartition implicite décrite plus haut attribue toute l'unité aux notes et prolongations comptées : elle ne permet pas de représenter une portion silencieuse. Il faut distinguer :
 - une note : le son commence ;
 - un signe `-` : le son de la note précédente continue ;
 - une partie vide : silence.
@@ -210,7 +227,7 @@ Pour les divisions non spécifiées, la syntaxe et le rendu restent à décider 
 Les points suivants ne sont pas encore suffisamment déterminés pour être considérés comme des règles validées :
 
 - La syntaxe exacte des silences dans toutes les subdivisions.
-- La lecture précise de certains exemples de prolongation ou de silence à l'intérieur d'un triolet, notamment `|d.-.d:|`, `:d-d:` et `:d..d:`.
+- La lecture précise des exemples de prolongation ou de silence à l'intérieur des groupes non binaires, notamment `|d.-.d:|` et `:d..d:`. La répartition implicite `:d-d:` est désormais définie dans la section 3.
 - La convention de saisie et de rendu des divisions qui ne sont pas définies par la notation Sol-fa.
 - Les symboles précis et la syntaxe de saisie des nuances, du point d'orgue et des autres indications musicales.
 - Les autres signatures et regroupements qui n'ont pas encore été explicitement validés.
