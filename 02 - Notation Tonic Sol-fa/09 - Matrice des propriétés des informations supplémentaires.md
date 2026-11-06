@@ -114,7 +114,7 @@ La plage est une donnée fonctionnelle. Le dessin du soufflet est une donnée de
 
 **Décision MireDo déjà validée :** la référence conventionnelle du tempo est la noire par minute, indépendante de l'unité native Sol-fa. Le modèle doit conserver le texte/repère écrit et la valeur interprétée séparément.
 
-Le manuel MuseScore distingue les marques métronomiques, les indications verbales, les lignes progressives et les modulations métriques. Il permet des paramètres de remplacement du tempo écrit et, pour les lignes, une cible et une méthode de transition. Il précise également que les indications de tempo agissent sur toutes les portées de la partition.
+Le manuel MuseScore distingue les marques métronomiques, les indications verbales, les lignes progressives et les modulations métriques. Le manuel précise aussi que son unité technique de lecture BPM est basée sur les noires (quarter notes), tandis que la marque écrite peut afficher une autre valeur de note. MireDo doit donc conserver la valeur écrite (note de référence + nombre) et sa conversion exacte vers la référence interne validée en noires par minute. Il ne faut pas recopier directement une valeur BPM du moteur d'un autre logiciel sans vérifier sa base temporelle. Il permet des paramètres de remplacement du tempo écrit et, pour les lignes, une cible et une méthode de transition. Il précise également que les indications de tempo agissent sur toutes les portées de la partition.
 
 ### 2.4 Articulations et accents
 
