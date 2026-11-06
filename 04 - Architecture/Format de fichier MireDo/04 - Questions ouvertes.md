@@ -33,7 +33,7 @@ Aucune question de cette page n'est considérée comme décidée par le seul fai
 
 ## 5. Notes et rythme
 
-- [ ] Définir les divisions non binaires autres que le triolet et le sextolet, ainsi que les cas combinant ces groupes avec des silences ou des structures rythmiques plus complexes. Le triolet répartit une unité Sol-fa en trois positions égales ; le sextolet la répartit en six positions égales.
+- [ ] Définir, pour la notation textuelle Tonic Sol-fa, les conventions de saisie des divisions qui ne sont pas encore documentées et les cas combinant ces groupes avec des silences ou des prolongations. Le modèle temporel MireDo peut déjà représenter toute division entière positive N ; cette capacité interne ne préjuge pas de la syntaxe conventionnelle de la notation source.
 
 - [ ] Une première version conservera-t-elle les fragments de notation Sol-fa comme chaînes, ou utilisera-t-elle immédiatement des jetons structurés ?
 - [ ] Quelle représentation structurée conservera les divisions explicites et les portions silencieuses qu'elles délimitent ? La répartition implicite sans signe de division est définie : elle répartit l'unité entre notes et prolongations, sans possibilité d'y insérer un silence.
