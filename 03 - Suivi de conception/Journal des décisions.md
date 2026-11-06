@@ -160,3 +160,15 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Précision :** une position occupée par `-` prolonge la note précédente. Elle compte comme une position du groupe, sans produire une nouvelle attaque.
 - **Précision :** la courbe de groupement couvre le fragment complet, prolongations comprises.
 - **Statut :** confirmé par l'utilisateur.
+
+
+## 2026-11-06 — Positions temporelles et divisions de l'unité
+
+- **Décision :** les événements d'une unité native sont repérés par leur position de début, exprimée comme une fraction exacte de cette unité.
+- **Décision :** le dénominateur est un entier positif libre N ; aucune liste fermée de dénominateurs n'est imposée. Le modèle peut représenter une division en N parts égales pour tout entier positif.
+- **Décision :** pour une division égale en N positions, les débuts sont 0/N, 1/N, ..., (N-1)/N. Ainsi, un triolet utilise 0/3, 1/3, 2/3, et une division en cinq utilise 0/5, 1/5, 2/5, 3/5, 4/5.
+- **Précision :** en 4/4, une unité native correspond à une noire ; une division en N partage donc cette noire en N durées égales.
+- **Décision :** une unité peut également contenir des segments de durées inégales. Les positions utilisent alors un dénominateur commun permettant de représenter exactement tous les débuts d'événements ; la durée est calculée jusqu'à la position suivante ou jusqu'à la fin de l'unité.
+- **Précision :** le dénominateur commun est conservé comme information de division ; 0/3 n'est pas normalisé en 0/1.
+- **Précision :** cette liberté appartient au modèle temporel interne de MireDo. Elle ne crée pas automatiquement une syntaxe Tonic Sol-fa pour les divisions dont les conventions de notation source ne sont pas encore documentées.
+- **Statut :** modèle temporel validé par l'utilisateur ; la syntaxe de notation source pour les divisions non documentées reste ouverte.
