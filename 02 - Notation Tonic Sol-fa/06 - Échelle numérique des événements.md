@@ -156,3 +156,20 @@ Ces exemples illustrent uniquement le sens des codes. Les positions et les duré
 - Une prolongation reste liée à la note qu'elle prolonge.
 
 Le schéma JSON définitif du fichier **.mrd** et les noms de ses propriétés ne sont pas définis par ce document.
+
+
+## 9. Portée de l'échelle et organisation du fichier
+
+L'ensemble ℤ décrit le **code numérique du type ou de la hauteur de l'événement**. Il ne définit pas l'organisation hiérarchique du contenu dans le fichier MireDo.
+
+En particulier, les valeurs -1 et -2 ne sont pas des niveaux de la hiérarchie : elles ne représentent ni une unité ni une sous-unité. Elles désignent respectivement un silence et une prolongation lorsqu'un événement est codé.
+
+L'organisation des données suit une autre logique : partition → mesures communes → voix dans chaque mesure → unités natives → sous-unités → événements. Cette organisation est décrite dans [[../04 - Architecture/Format de fichier MireDo/05 - Organisation temporelle du contenu musical]].
+
+Il faut donc garder séparés :
+- **le code d'événement**, qui identifie une hauteur, un silence ou une prolongation ;
+- **la position**, qui situe l'événement dans son unité ;
+- **la durée**, calculée selon la structure temporelle ;
+- **la hiérarchie du fichier**, qui rattache l'événement à sa sous-unité, son unité, sa voix et sa mesure.
+
+Le code numérique ne remplace aucun de ces trois autres aspects.
