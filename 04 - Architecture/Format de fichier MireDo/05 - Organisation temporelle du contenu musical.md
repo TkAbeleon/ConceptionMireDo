@@ -46,6 +46,22 @@ Conséquences :
 
 La structure commune évite qu'une voix soit décalée dans sa numérotation ou qu'une même position de partition désigne accidentellement des mesures différentes.
 
+## 3.1 Indexation des mesures et point d'ancrage
+
+La chronologie de la partition possède un **point d'ancrage d'indice 0**, qui représente l'origine temporelle de la partition, avant le début de la première mesure.
+
+Les mesures effectives sont ensuite indexées de **1 à n**, dans leur ordre chronologique :
+
+- **0** : point d'ancrage initial ; ce n'est pas une mesure ;
+- **1** : première mesure ;
+- **2** : deuxième mesure ;
+- **…**
+- **n** : dernière mesure de la partition.
+
+Le point d'ancrage 0 sert de référence à l'origine de la chronologie. Il ne contient pas une mesure et ne compte pas dans le nombre de mesures. Une partition qui contient n mesures possède donc n mesures numérotées de 1 à n, en plus de son ancrage initial.
+
+Cette indexation est commune à toutes les voix : il n'existe pas de mesure 1 propre à la Soprano et une autre mesure 1 propre à la Basse.
+
 ## 4. Les voix à l'intérieur d'une mesure
 
 Chaque mesure contient les données temporelles de chacune des voix concernées.
@@ -72,6 +88,19 @@ Pour le modèle MireDo :
 
 L'unité native n'est pas une sous-unité et ne doit pas être confondue avec la noire de référence utilisée pour exprimer le tempo.
 
+## 5.1 Indexation des unités dans une mesure
+
+Dans chaque mesure, les unités natives sont indexées localement de **1 à n**, où **n est le nombre d'unités natives que contient cette mesure** selon sa signature et la disposition retenue.
+
+- **1** : première unité de la mesure ;
+- **2** : deuxième unité ;
+- **…**
+- **n** : dernière unité de la mesure.
+
+Cette numérotation recommence à 1 au début de chaque nouvelle mesure. Elle est locale à la mesure : l'unité 1 de la mesure 2 est distincte de l'unité 1 de la mesure 1.
+
+Le nombre n n'est pas une constante universelle : il dépend de la structure de la mesure considérée. Les unités sont présentes dans le contenu de chaque voix, mais elles correspondent aux mêmes intervalles temporels pour toutes les voix de cette mesure.
+
 ## 6. Les sous-unités : subdivisions internes
 
 Une unité peut être organisée en sous-unités, c'est-à-dire en portions temporelles plus petites.
@@ -83,6 +112,26 @@ Les sous-unités permettent de situer les événements à des positions exactes.
 La documentation musicale Tonic Sol-fa décrit les signes et conventions qui peuvent conduire à ces répartitions : division explicite, répartition implicite, triolet, sextolet et portions silencieuses. Le modèle MireDo doit représenter le résultat temporel de ces règles sans confondre la structure de données avec les signes de la notation source.
 
 Le modèle temporel utilise des fractions exactes relatives à l'unité native. Tout entier positif N peut servir de dénominateur pour représenter une division en N positions ; aucune liste fermée de dénominateurs n'est imposée. Les règles détaillées figurent dans [[../../02 - Notation Tonic Sol-fa/05 - Rythme et durée]].
+
+## 6.1 Repérage fractionnaire des sous-unités
+
+Les sous-unités ne sont pas repérées par une numérotation globale qui se poursuivrait d'une unité à l'autre. Elles sont situées **à l'intérieur de leur unité native**, au moyen des fractions exactes déjà définies dans le modèle temporel.
+
+Pour une division d'une unité en N positions égales, les positions sont :
+
+`0/N, 1/N, 2/N, …, (N-1)/N`.
+
+- `0/N` est l'ancrage du début de l'unité ;
+- `1/N` est le début de la deuxième portion ;
+- `2/N` est le début de la troisième portion ;
+- etc. ;
+- `N/N` est la frontière de fin de l'unité, et non une nouvelle sous-unité.
+
+N est un entier strictement positif et n'est pas limité à une liste prédéfinie. Le même principe permet de représenter les divisions en 2, 3, 4, 5, 6, 7 ou tout autre nombre entier positif de portions.
+
+Pour des durées inégales, les positions sont toujours des fractions exactes rapportées à l'unité. Un dénominateur commun permet de représenter exactement les débuts des segments. Les fractions servent donc à situer les événements dans l'unité ; elles ne constituent pas des numéros de sous-unités indépendants.
+
+Le dénominateur et les fractions sont locaux à l'unité considérée. Une position `1/3` dans une unité signifie un tiers de cette unité, quelle que soit la mesure dans laquelle elle se trouve.
 
 ## 7. Les événements
 
