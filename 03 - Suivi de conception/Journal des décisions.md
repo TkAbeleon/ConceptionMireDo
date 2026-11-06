@@ -193,3 +193,13 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Travaux ultérieurs autorisés dans ce périmètre :** préciser l'inventaire des éléments, leurs propriétés, leur interface, leur stockage, leur rendu, leur lecture sonore et leur prise en charge par les exports, en appliquant les décisions validées.
 - **Règle de continuité :** ces travaux techniques ne rouvrent pas les décisions fonctionnelles clôturées, sauf demande explicite de révision.
 - **Statut :** cadrage fonctionnel clôturé par l'utilisateur.
+
+## 2026-11-06 — Matrice conceptuelle des propriétés des informations supplémentaires
+
+- **Décision de conception :** documenter les propriétés des informations supplémentaires en séparant identité et sens musical, association et portée, présentation graphique, et interprétation/lecture.
+- **Précision :** les propriétés communes sont conceptuelles et conditionnelles ; chaque type ne reçoit que les propriétés qui lui sont applicables.
+- **Précision :** distinguer propriétés individuelles, styles de famille, style global de partition et préférences d'éditeur.
+- **Précision :** distinguer position automatique/manuelle, visibilité, activation sonore, valeur écrite et valeur interprétée.
+- **Précision :** les propriétés propres à chaque famille sont documentées dans « Matrice des propriétés des informations supplémentaires ».
+- **Statut :** matrice conceptuelle documentée ; les noms de clés JSON et les types techniques restent volontairement non définis.
+- **Préparation au schéma :** le périmètre conceptuel des informations supplémentaires est suffisamment structuré pour servir à la modélisation. L'inventaire exhaustif des symboles, les parcours complexes, les limites du moteur de lecture et les décisions transversales de format restent à traiter ou à intégrer au schéma extensible.
