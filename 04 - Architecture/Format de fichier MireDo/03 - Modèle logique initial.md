@@ -276,3 +276,54 @@ Les modalités concrètes de ces modes, leur ergonomie et la conservation évent
 - La représentation détaillée des positions temporelles dans le schéma définitif.
 
 Ces points restent dans [[04 - Questions ouvertes]].
+
+
+## 9. Positions temporelles et divisions de l'unité
+
+Le contenu rythmique d'une voix est organisé par mesure, unité native et événements. Chaque événement est repéré par sa position de début, exprimée comme une fraction exacte de l'unité. La position ne représente ni une durée ni un numéro ordinal.
+
+### 9.1 Dénominateur libre
+
+Le dénominateur est un entier positif N, sans liste de valeurs autorisées prédéfinie. Le modèle accepte toute division égale d'une unité en N positions : 2, 3, 4, 5, 6, 7, 9, 11, etc.
+
+Pour une division égale en N positions, les événements commencent aux positions 0/N, 1/N, 2/N, ..., (N-1)/N. Chaque position occupe 1/N de l'unité.
+
+Exemples :
+- Triolet : N=3, positions 0/3, 1/3, 2/3.
+- Division en cinq : N=5, positions 0/5, 1/5, 2/5, 3/5, 4/5.
+- Division en sept : N=7, positions 0/7, 1/7, 2/7, 3/7, 4/7, 5/7, 6/7.
+
+En 4/4, une unité native vaut une noire. Diviser cette unité en cinq signifie donc diviser une noire en cinq durées égales ; cela ne change ni la signature ni la définition de l'unité native.
+
+### 9.2 Durées inégales dans une unité
+
+Le modèle n'impose pas que tous les événements d'une unité aient la même durée. Les positions utilisent un dénominateur commun permettant de représenter exactement les débuts de tous les segments.
+
+Exemple : Do pendant 1/4, silence pendant 1/4, puis Ré pendant 2/4 :
+
+| Position | Valeur | Durée calculée |
+|---:|---|---:|
+| 0/4 | Do | 1/4 |
+| 1/4 | Silence | 1/4 |
+| 2/4 | Ré | 2/4 |
+
+La durée d'un événement est calculée par différence avec la position suivante. Le dernier événement se termine à la frontière de l'unité. Il n'est pas nécessaire d'ajouter un événement à cette frontière.
+
+Pour toute répartition finie de durées rationnelles, un dénominateur commun approprié permet de représenter les positions sans approximation. Le dénominateur commun est conservé comme information de division : 0/3 reste écrit sur une division en trois et n'est pas normalisé en 0/1.
+
+### 9.3 Contraintes temporelles
+
+Pour une unité utilisant le dénominateur commun N :
+1. N est un entier strictement positif.
+2. Chaque position est de la forme k/N, avec k entier et 0 <= k < N.
+3. Le premier événement commence à 0/N.
+4. Les positions sont uniques et strictement croissantes.
+5. La durée d'un événement est l'écart avec la position suivante ; la dernière durée va jusqu'à N/N.
+6. Toutes les durées sont strictement positives et leur somme vaut exactement une unité.
+7. Les positions et calculs utilisent des rationnels exacts, jamais des nombres flottants.
+
+### 9.4 Portée de cette règle
+
+Cette règle décrit la capacité du modèle temporel MireDo. Elle n'affirme pas que la notation textuelle Tonic Sol-fa possède déjà une convention de saisie documentée pour chaque valeur de N. Les règles de notation source qui ne sont pas encore établies restent à définir séparément.
+
+La présente section concerne les données musicales temporelles. Elle ne spécifie pas la restitution visuelle des groupes ou des événements.
