@@ -77,7 +77,7 @@ Un changement de signature et un changement de tempo sont deux informations dist
 - [ ] Comment relier les syllabes aux attaques musicales de manière durable ?
 - [ ] Comment enregistrer les paroles propres à une voix ?
 - [ ] Comment représenter les accords latins, Sol-fa et chiffres romains ?
-- [ ] Comment représenter les reprises, nuances, articulations, ornements et points d'orgue ?
+- [ ] Définir, lors de la conception technique, les structures de stockage, propriétés, paramètres et liens d'association des reprises, nuances, articulations, ornements et points d'orgue. Leur cadrage fonctionnel et leurs familles sont déjà validés dans [[../../02 - Notation Tonic Sol-fa/07 - Reprises et indications musicales]].
 
 ## 8. Mise en page et ressources
 
