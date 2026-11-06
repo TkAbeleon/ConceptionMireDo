@@ -158,3 +158,18 @@ Ces points seront conçus en s'appuyant sur les logiciels de référence, sans r
 - Les paramètres et effets précis de ces indications sur la lecture sonore et les exports.
 
 Aucune syntaxe non validée ne doit être présentée comme une convention Tonic Sol-fa officielle.
+
+## 8. Clôture du cadrage fonctionnel
+
+**Statut : cadrage fonctionnel général validé et clôturé le 2026-11-06.**
+
+Les décisions suivantes sont considérées comme acquises pour la conception de MireDo :
+
+- toutes les indications concernées sont regroupées dans la catégorie générale « Informations supplémentaires » ;
+- les familles fonctionnelles recensées dans la section 6.3 constituent le périmètre de référence ;
+- leur sens et leur comportement musical suivent les conventions du solfège et des logiciels de notation de référence ; MireDo ne crée pas de règles musicales nouvelles ;
+- MuseScore est la référence principale pour reprendre l'organisation et le fonctionnement des outils, avec les autres logiciels reconnus comme références complémentaires ;
+- une indication ponctuelle est associée au niveau de l'unité musicale ; une indication étendue conserve son début et sa fin ; une indication de navigation ou de reprise conserve ses repères structurels ;
+- la représentation graphique, l'édition et l'effet sur la lecture sont traités conformément au type d'indication et aux conventions des logiciels de référence.
+
+**La discussion sur le cadrage fonctionnel général des informations supplémentaires est donc clôturée.** Les travaux ultérieurs porteront uniquement sur les détails nécessaires à leur réalisation : inventaire précis des symboles, propriétés, interface, stockage, placement graphique, lecture sonore et exports. Ces travaux ne doivent pas rouvrir les décisions fonctionnelles ci-dessus sans nouvelle demande explicite.
