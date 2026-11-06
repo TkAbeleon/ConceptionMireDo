@@ -92,40 +92,59 @@ MireDo prend également en charge les sauts de page :
 
 Ces règles concernent la mise en page du document et ne modifient ni la structure musicale ni la durée des mesures. La syntaxe des commandes de mise en page sera précisée dans la conception technique.
 
-## 7. Placement des paroles dans une partition à plusieurs voix
+## 7. Paroles et couplets
 
-Les paroles sont écrites une seule fois pour l'ensemble vocal, et non répétées sous chaque portée.
+Les paroles peuvent être communes à l'ensemble vocal ou propres à une ou plusieurs voix.
 
-Deux présentations sont proposées :
+### 7.1 Paroles communes et paroles propres aux voix
 
-### Présentation par défaut : paroles sous toutes les portées
+- **Paroles communes** : un même texte est partagé par les voix concernées. Il n'est pas nécessaire de le dupliquer sous chaque portée.
+- **Paroles propres aux voix** : chaque voix concernée possède son propre texte, qui peut être différent de celui des autres voix.
+- Lorsque toutes les voix ont des paroles distinctes, il n'y a pas de texte général commun à l'ensemble vocal.
+- Une même partition peut combiner des paroles communes pour certaines voix et des paroles spécifiques pour d'autres, lorsque le passage le demande.
 
-Toutes les portées de la partition sont regroupées au-dessus de la ligne de paroles. Les paroles sont placées une seule fois sous l'ensemble des portées, quelle que soit la structure vocale choisie (SATB ou autre).
+### 7.2 Organisation des couplets
 
-### Présentation alternative : paroles entre deux groupes de portées
+Une œuvre peut comporter plusieurs couplets associés à une même musique. Les couplets sont identifiés séparément (couplet 1, couplet 2, couplet 3, etc.).
 
-Les paroles peuvent être placées entre deux groupes de portées. Dans une partition SATB, les portées S et A forment le groupe supérieur ; les portées T et B forment le groupe inférieur. Les paroles sont écrites une seule fois entre ces deux groupes.
+La musique n'a pas à être dupliquée pour enregistrer les différents textes. Les paroles de chaque couplet restent associées à la structure musicale correspondante.
 
-Cette deuxième présentation reprend la disposition des barres utilisée en solfège classique :
-- au début du système, la barre verticale initiale est longue et relie les portées ;
-- au niveau de la ligne de paroles, la barre de mesure ne traverse pas l'espace réservé aux paroles entre les deux groupes de portées. Les portées du groupe supérieur et celles du groupe inférieur restent chacune délimitées selon cette disposition.
+### 7.3 Modes de présentation des couplets
 
-Cette présentation alternative n'est pas limitée à SATB : les groupes de portées peuvent être adaptés à la structure vocale de la partition.
+MireDo propose trois modes de présentation :
 
-Dans les deux présentations, les paroles restent uniques et sont alignées avec les notes auxquelles elles correspondent.
+1. **Tous les couplets sous les notes** : chaque couplet est affiché directement sous les notes auxquelles ses syllabes correspondent. Chaque ligne de paroles est identifiée par le numéro du couplet.
+2. **Premier couplet sous les notes, tous les couplets sous la partition** : le premier couplet est affiché sous les notes ; l'ensemble des textes est également présenté en dessous de la partition, hors des portées. Le premier couplet peut donc apparaître dans les deux emplacements.
+3. **Mode mixte** : tous les couplets sont affichés sous les notes et tous les couplets sont également présentés en dessous de la partition.
 
-### Paroles indépendantes pour une voix
+Le choix du mode concerne la présentation des paroles ; il ne modifie pas la musique ni l'identité des couplets.
 
-Dans certains passages chorals, une voix peut avoir un texte différent ou avancer indépendamment des autres voix (comme cela peut se présenter dans le *Hallelujah* de Haendel). Dans ce cas, les paroles propres à cette voix sont placées directement sous sa portée.
+### 7.4 Indépendance des deux présentations
 
-Cette disposition peut être utilisée ponctuellement pour une ou plusieurs voix concernées, tandis que les autres voix conservent leur disposition de paroles commune. Elle ne constitue pas le mode général par défaut : elle répond aux besoins du passage musical.
+Les paroles affichées sous les notes et celles présentées en dessous de la partition sont deux représentations éditoriales indépendantes.
 
-### Soulignement des notes portant une même syllabe
+En particulier, lorsque le premier couplet apparaît aux deux endroits, les deux textes sont édités séparément. MireDo ne doit pas supposer qu'il peut reconstruire automatiquement le texte continu à partir des paroles découpées en syllabes et alignées sous les notes. Si l'utilisateur souhaite les deux présentations, il renseigne chacune d'elles.
 
-Lorsqu'une même syllabe des paroles est chantée sur plusieurs notes successives d'une voix, le compositeur peut souligner toutes les notes correspondant à cette syllabe.
+### 7.5 Niveau d'organisation des paroles et mélismes
 
-Exemple : dans `d(a) r d t d(men)`, les quatre notes `d r d t` portent la syllabe « a » ; elles sont donc toutes soulignées. La dernière note porte la syllabe « men » et n'appartient pas à ce groupe.
+Les paroles restent organisées au niveau des unités musicales. Il n'est pas nécessaire de créer une structure de paroles détaillée sous chaque note.
 
-Le soulignement est une indication éditoriale explicite : il est défini et placé par le compositeur. MireDo ne doit pas le déduire automatiquement de la présence d'une syllabe ou d'une succession de notes.
+En revanche, une indication de mélisme peut être portée directement par les notes concernées : elle permet de montrer immédiatement au lecteur que plusieurs notes successives correspondent à une même syllabe. Cette indication est propre à la voix concernée et ne modifie ni la hauteur ni la durée des notes.
 
-Cette indication s'applique uniquement à la voix concernée. Si une autre voix ne présente pas la même situation syllabique, ses notes ne sont pas soulignées pour cette raison. Le soulignement ne modifie ni la hauteur ni la durée des notes ; il indique seulement que plusieurs notes successives sont chantées sur une même syllabe.
+### 7.6 Paroles lors des reprises et répétitions
+
+Une reprise musicale ne signifie pas nécessairement que les paroles doivent être répétées à l'identique.
+
+Une même section musicale peut être chantée plusieurs fois avec des paroles différentes selon l'occurrence de la reprise. MireDo doit donc permettre d'associer un texte différent à une occurrence donnée de la section, sans obliger à dupliquer les notes ou la structure musicale.
+
+Cette possibilité s'applique aussi bien aux paroles communes qu'aux paroles propres à une voix, selon les voix concernées.
+
+## 8. Principes à respecter pour les paroles
+
+- Les paroles peuvent être communes ou propres à chaque voix.
+- Une œuvre peut contenir plusieurs couplets associés à une même musique.
+- Les trois modes de présentation des couplets sont pris en charge : tous sous les notes ; premier sous les notes et tous sous la partition ; tous aux deux emplacements.
+- Les paroles sous les notes et les textes sous la partition sont édités indépendamment.
+- Les paroles restent organisées au niveau des unités musicales ; les indications de mélisme peuvent être portées au niveau des notes.
+- Une occurrence de reprise peut avoir des paroles différentes d'une autre occurrence de la même musique.
+- Les choix de paroles et de présentation ne doivent pas obliger à dupliquer la structure musicale.
