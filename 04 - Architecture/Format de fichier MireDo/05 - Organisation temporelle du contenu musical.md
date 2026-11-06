@@ -149,27 +149,29 @@ Le code numérique d'un événement, sa position temporelle et sa durée sont de
 
 ## 8. Exemple conceptuel d'organisation
 
-Exemple abstrait d'une mesure contenant deux voix :
+Exemple abstrait d'une mesure contenant deux voix. Dans la première unité de la Soprano, les événements commencent aux positions fractionnaires indiquées :
 
 ~~~text
 Partition
 └── Mesure commune
     ├── Voix Soprano
     │   ├── Unité 1
-    │   │   ├── Sous-unité 1 → Note
-    │   │   ├── Sous-unité 2 → Silence
-    │   │   └── Sous-unité 3 → Note
+    │   │   ├── Position 0/3 → Note
+    │   │   ├── Position 1/3 → Silence
+    │   │   └── Position 2/3 → Note
     │   └── Unité 2
     │       └── Événements de la voix
     └── Voix Basse
         ├── Unité 1
-        │   ├── Sous-unité 1 → Note
-        │   └── Sous-unité 2 → Prolongation de cette note
+        │   ├── Position 0/2 → Note
+        │   └── Position 1/2 → Prolongation de cette note
         └── Unité 2
             └── Événements de la voix
 ~~~
 
-Cet exemple illustre uniquement les relations entre les niveaux. Il ne fixe ni le nombre d'unités d'une mesure donnée, ni le nombre de sous-unités, ni les propriétés JSON à utiliser.
+Les fractions indiquent des positions relatives au début de l'unité native ; elles ne sont pas des numéros de sous-unités. Ainsi, `1/3` désigne le début de la deuxième portion d'une division en trois, et `1/2` le début de la deuxième portion d'une division en deux. La prolongation reste liée à la note précédente et ne crée pas une nouvelle attaque.
+
+Cet exemple illustre uniquement les relations entre les niveaux et le repérage fractionnaire. Il ne fixe ni le nombre d'unités d'une mesure donnée, ni les propriétés JSON à utiliser.
 
 ## 9. Ce qui relève de cette organisation et ce qui n'en relève pas
 
