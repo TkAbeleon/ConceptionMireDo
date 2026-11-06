@@ -80,7 +80,9 @@ Le futur modèle doit pouvoir représenter les conventions existantes :
 - anacrouses et séparateurs au début d'un passage ;
 - doubles barres facultatives et changements de référence.
 
-Le format ne doit pas ajouter une règle générale pour les divisions rythmiques qui ne sont pas définies dans la conception.
+Le modèle temporel doit pouvoir représenter une unité divisée en N parts égales pour tout entier positif N, sans liste fermée de dénominateurs. Les positions des événements sont des fractions exactes relatives à l'unité native et utilisent un dénominateur commun positif conservé dans la représentation. Les événements peuvent avoir des durées égales ou inégales ; leur durée est calculée par l'écart jusqu'à la position suivante, ou jusqu'à la fin de l'unité pour le dernier événement. Les positions sont ordonnées, distinctes, commencent à 0/N et restent inférieures à N/N. Les nombres flottants ne sont pas utilisés pour stocker ou calculer ces positions.
+
+Cette liberté du modèle interne ne définit pas automatiquement une syntaxe Tonic Sol-fa pour chaque division possible : les conventions de notation source non documentées restent à préciser.
 
 La signature et la disposition doivent rester deux informations distinctes.
 
