@@ -10,10 +10,13 @@ Ce dossier étudie la proposition d'un conteneur JSON, la compare aux règles mu
 - [[02 - Exigences du format]] — propriétés que le futur format doit respecter.
 - [[03 - Modèle logique initial]] — première organisation des données, explicitement provisoire et précisée par les décisions de conception confirmées.
 - [[04 - Questions ouvertes]] — décisions nécessaires avant de stabiliser un schéma.
+- [[05 - Organisation temporelle du contenu musical]] — hiérarchie MireDo : mesures communes, voix, unités natives, sous-unités et événements.
 
 ## État actuel de la conception temporelle
 
 La documentation Tonic Sol-fa distingue désormais la division binaire explicite (point puis virgule pour subdiviser une moitié), la répartition implicite égale des notes et des prolongations en l'absence de signe de division, ainsi que les groupes non binaires déjà définis : le triolet répartit une unité en trois positions égales et le sextolet en six positions égales. Dans la répartition implicite, les éléments comptés remplissent toute l'unité : aucun silence ne peut y être inséré. Voir [[../../02 - Notation Tonic Sol-fa/05 - Rythme et durée]].
+
+La hiérarchie d'organisation du fichier est également explicitée dans [[05 - Organisation temporelle du contenu musical]] : les mesures sont communes à la partition, les voix sont rattachées à chaque mesure, puis leur contenu est organisé en unités natives, sous-unités et événements. Cette hiérarchie relève du modèle MireDo et ne constitue pas une règle de syntaxe Tonic Sol-fa.
 
 Deux références complémentaires sont désormais validées :
 
