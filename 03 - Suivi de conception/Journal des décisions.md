@@ -184,3 +184,12 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Précision :** les familles concernées comprennent notamment les nuances et évolutions dynamiques, le tempo et ses évolutions, les articulations, les ornements, les notes de grâce, les trémolos, les arpèges et glissandos, les pauses et respirations, les liaisons et lignes musicales, les techniques de jeu, les reprises et repères de navigation, les textes et repères musicaux ainsi que les symboles harmoniques.
 - **Périmètre non fixé :** le catalogue exhaustif, les propriétés de chaque élément, les détails d'interface, le stockage dans le fichier `.mrd`, le placement graphique et les paramètres de lecture/export restent à concevoir à partir des logiciels de référence.
 - **Statut :** principes généraux et organisation validés par l'utilisateur ; détails techniques et inventaire exhaustif non définis.
+
+## 2026-11-06 — Clôture du cadrage fonctionnel des informations supplémentaires
+
+- **Décision :** le cadrage fonctionnel général des informations supplémentaires est clôturé.
+- **Décisions maintenues :** catégorie générale unique ; familles fonctionnelles recensées ; reprise des conventions musicales et des comportements des logiciels de référence ; MuseScore comme référence principale ; association ponctuelle au niveau de l'unité, étendue conservée pour les indications de durée et repères structurels conservés pour la navigation.
+- **Précision :** la clôture concerne les principes fonctionnels généraux. Elle ne signifie pas que chaque symbole, propriété ou détail technique a déjà été spécifié.
+- **Travaux ultérieurs autorisés dans ce périmètre :** préciser l'inventaire des éléments, leurs propriétés, leur interface, leur stockage, leur rendu, leur lecture sonore et leur prise en charge par les exports, en appliquant les décisions validées.
+- **Règle de continuité :** ces travaux techniques ne rouvrent pas les décisions fonctionnelles clôturées, sauf demande explicite de révision.
+- **Statut :** cadrage fonctionnel clôturé par l'utilisateur.
