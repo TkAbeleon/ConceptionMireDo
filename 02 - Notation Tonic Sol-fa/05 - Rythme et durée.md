@@ -190,13 +190,13 @@ Ces règles définissent la répartition temporelle du triolet et du sextolet da
 
 Le modèle temporel de MireDo représente les événements à l'intérieur de chaque unité native au moyen de positions fractionnaires exactes. Une unité est un intervalle complet ; les positions indiquent les débuts des événements, et non leurs durées ni des numéros de cases.
 
-Le dénominateur n'est pas limité à une liste prédéfinie. **Toute division en (N) parts égales est représentable, pour tout entier positif (N)**. Le modèle ne réserve donc pas les divisions aux seuls nombres 2, 3, 4 ou 6.
+Le dénominateur n'est pas limité à une liste prédéfinie. **Toute division en N parts égales est représentable, pour tout entier positif (N)**. Le modèle ne réserve donc pas les divisions aux seuls nombres 2, 3, 4 ou 6.
 
-Pour une division égale en (N) positions, les débuts des positions sont :
+Pour une division égale en N positions, les débuts des positions sont :
 
 `0/N, 1/N, 2/N, …, (N-1)/N`.
 
-Chaque position dure (1/N) de l'unité. Par exemple, un triolet utilise (N=3) et les positions `0/3`, `1/3`, `2/3`. Une division en cinq utilise (N=5) et les positions `0/5`, `1/5`, `2/5`, `3/5`, `4/5`. Une division en sept ou en onze suit exactement le même principe.
+Chaque position dure 1/N de l'unité. Par exemple, un triolet utilise N=3 et les positions `0/3`, `1/3`, `2/3`. Une division en cinq utilise N=5 et les positions `0/5`, `1/5`, `2/5`, `3/5`, `4/5`. Une division en sept ou en onze suit exactement le même principe.
 
 En 4/4, une unité native correspond à une noire. Une division de cette unité en cinq répartit donc une noire en cinq durées égales, chacune égale à un cinquième de noire. Le dénominateur exprime la division de l'unité native ; il ne remplace pas l'unité native et ne modifie pas la signature.
 
