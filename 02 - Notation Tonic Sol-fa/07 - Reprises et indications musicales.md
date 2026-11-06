@@ -76,7 +76,79 @@ Les ornements, les trémolos, les répétitions rapides ainsi que les notes de g
 
 Leur syntaxe de saisie, leurs paramètres éventuels (par exemple une valeur de tempo) et les détails de leur rendu restent à spécifier dans la conception.
 
-## 6. Points restant à préciser
+## 6. Organisation des informations supplémentaires dans MireDo
+
+### 6.1 Catégorie générale
+
+**Décision validée :** dans l'interface de MireDo, ces éléments sont regroupés sous une catégorie générale unique intitulée **Informations supplémentaires**.
+
+Les familles ci-dessous servent à organiser les éléments à l'intérieur de cette catégorie. Elles ne deviennent pas chacune une catégorie principale indépendante.
+
+### 6.2 Principe de référence
+
+**Décision validée :** MireDo reprend les conventions musicales établies en solfège et en notation musicale classique. Il n'est pas nécessaire de redéfinir ces règles pour Tonic Sol-fa.
+
+**Décision validée :** pour la saisie, l'édition, l'organisation des palettes, les propriétés, le placement et le rendu, MireDo reproduit le fonctionnement des logiciels de notation de référence, en prenant notamment MuseScore comme référence principale et les autres logiciels reconnus comme références complémentaires.
+
+Cela signifie que MireDo doit reprendre les familles d'éléments et leurs comportements usuels, plutôt que concevoir une organisation ou une sémantique musicale nouvelle. Les détails propres à l'interface de MireDo pourront être adaptés, sans modifier le sens musical conventionnel des indications.
+
+### 6.3 Familles d'informations supplémentaires
+
+Le regroupement couvre notamment les familles suivantes, conformément aux fonctions proposées par les logiciels de notation de référence :
+
+- **Nuances et dynamique :** piano, forte, pianissimo, fortissimo, mezzo-piano, mezzo-forte et autres niveaux dynamiques.
+- **Évolutions de dynamique :** crescendo, diminuendo et leurs représentations progressives.
+- **Tempo et indications de mouvement :** indication métronomique, changements de tempo, accelerando, ritardando, rallentando, a tempo, ritenuto, rubato, etc.
+- **Articulations et accents :** staccato, staccatissimo, legato, accent, marcato, tenuto et autres signes conventionnels.
+- **Ornements :** trilles, mordants, gruppettos et autres ornements.
+- **Notes de grâce :** appoggiatures, acciaccaturas et autres notes d'ornement.
+- **Trémolos et répétitions rapides :** signes et indications conventionnels correspondants.
+- **Arpèges et glissandos :** indications de jeu et de liaison entre hauteurs.
+- **Pauses et respirations :** point d'orgue, césure, respiration et indications apparentées.
+- **Liaisons et lignes musicales :** liaison d'expression, liaison de prolongation, lignes d'octave, lignes de pédale, soufflets et autres lignes à portée définie.
+- **Techniques de jeu :** indications propres à l'exécution instrumentale ou vocale, selon les conventions du logiciel de référence.
+- **Reprises et navigation :** D.C., D.S., Segno, Fine, Coda, To Coda, fins alternatives et autres repères de parcours.
+- **Repères et textes musicaux :** lettres de répétition, repères de répétition, textes attachés à une portée ou à un système et indications éditoriales musicales.
+- **Symboles harmoniques :** chiffrages et symboles d'accords, lorsqu'ils sont proposés dans l'organisation des éléments de notation.
+
+Cette liste constitue le périmètre fonctionnel des familles à prendre en charge. Elle ne fixe pas encore l'inventaire exhaustif de chaque symbole, de chaque variante ou de chaque propriété.
+
+### 6.4 Niveaux d'association dans la partition
+
+**Décision validée :** pour une indication ponctuelle, l'unité musicale constitue le niveau de précision maximal d'association dans le modèle de MireDo. Une indication ponctuelle est donc rattachée à l'unité concernée, même si un logiciel de notation classique peut proposer un ancrage plus fin à une note.
+
+Les indications dont le fonctionnement conventionnel porte sur une durée ou un passage doivent toutefois conserver leur étendue : par exemple, un crescendo ou une ligne musicale possède un début et une fin. Les repères de reprise et de navigation doivent être associés aux éléments structurels concernés.
+
+Ces associations permettent de conserver le comportement musical attendu sans réduire une indication étendue ou structurelle à un simple événement ponctuel.
+
+### 6.5 Comportement et rendu
+
+MireDo reprend, pour chaque famille, les comportements conventionnels des logiciels de référence :
+
+- ajout depuis une palette ou un mécanisme de saisie équivalent ;
+- association à l'unité, à une étendue ou à un repère structurel selon la nature de l'indication ;
+- modification et suppression de l'indication ;
+- affichage du symbole, du texte ou de la ligne conformément aux conventions graphiques ;
+- conservation de ses paramètres lorsqu'elle en possède ;
+- effet sur la lecture sonore lorsqu'il s'agit d'une indication ayant un effet d'interprétation ;
+- prise en compte dans les exports qui prennent en charge l'information concernée.
+
+Une indication visuelle et son effet musical ne doivent pas être confondus : un texte simplement affiché ne doit pas produire automatiquement un effet sonore si, dans le logiciel de référence, il s'agit d'un texte sans fonction d'interprétation.
+
+### 6.6 Limites de cette décision
+
+Les décisions ci-dessus valident l'organisation générale, les familles fonctionnelles, le principe de reprise des conventions existantes et les niveaux généraux d'association. Elles ne définissent pas encore :
+
+- le catalogue exhaustif des symboles et variantes ;
+- les palettes et leur organisation détaillée dans l'interface ;
+- les propriétés et paramètres précis de chaque élément ;
+- les règles techniques de stockage dans le fichier `.mrd` ;
+- les détails de placement, de collision et de rendu ;
+- les paramètres exacts de lecture sonore et les limites de chaque export.
+
+Ces points seront conçus en s'appuyant sur les logiciels de référence, sans réinventer les conventions musicales.
+
+## 7. Points restant à préciser
 
 - La graphie exacte des instructions D.C. et D.S. dans la syntaxe Tonic Sol-fa de MireDo.
 - La forme de saisie et de rendu des repères Segno identifiés (`S_1`, `S_2`, etc.).
