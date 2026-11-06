@@ -9,6 +9,7 @@ Ce dossier formalise progressivement les conventions utilisées par MireDo pour 
 - [[03 - Octaves et représentation]] — suffixes numériques et rendu typographique.
 - [[04 - Référence tonale et mode]] — interprétation des degrés selon la partition.
 - [[05 - Représentation numérique des hauteurs]] — axe chromatique entier, référence numérique de portée et responsabilités de conversion.
+- [[06 - Échelle numérique des événements]] — représentation commune des hauteurs, des silences et des prolongations dans l'ensemble ℤ.
 - [[08 - Degrés et symboles d'accords]] — degrés harmoniques et deux systèmes facultatifs d'écriture des accords.
 
 ## Limites de cette section
