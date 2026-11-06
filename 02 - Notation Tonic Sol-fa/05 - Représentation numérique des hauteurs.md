@@ -106,12 +106,26 @@ La coordonnée numérique représente la position chromatique ; elle ne remplace
 
 Deux graphies enharmoniques peuvent donc partager une même coordonnée numérique tout en restant distinctes dans la partition. Par exemple, mi et f peuvent correspondre à la même hauteur sonore sans que MireDo remplace l'une par l'autre.
 
-Le modèle doit donc conserver séparément :
-- la graphie originale saisie ;
-- l'équivalent numérique calculé ;
-- les références contextuelles nécessaires à l'interprétation et au placement.
-
 Aucune normalisation enharmonique automatique n'est autorisée.
+
+### 7.1 Graphie d'affichage choisie par le compositeur
+
+La graphie est une information de présentation, indépendante de la hauteur musicale. Le compositeur peut choisir, pour une voix, une graphie Sol-fa différente de la graphie par défaut afin de représenter visuellement une même hauteur.
+
+Plusieurs graphies Sol-fa peuvent en effet désigner une seule et même hauteur. Par exemple, selon le contexte tonal et les règles de graphie déjà définies, fi, se, sa et so peuvent représenter la même hauteur.
+
+Le choix de graphie :
+- est facultatif ;
+- est défini indépendamment pour chaque voix ;
+- concerne la représentation d'une hauteur dans cette voix ;
+- ne change jamais la coordonnée numérique de la hauteur ;
+- ne modifie ni la lecture, ni l'analyse, ni l'interprétation musicale de la partition.
+
+Si le compositeur ne fait aucun choix particulier, aucune information supplémentaire n'est enregistrée et la graphie par défaut est utilisée.
+
+Si le compositeur choisit une autre graphie, le fichier conserve la graphie complète choisie. Par exemple, si la graphie voulue est se, la valeur enregistrée est se et non simplement e. L'information doit permettre de retrouver sans ambiguïté la graphie exacte à afficher.
+
+La graphie choisie est donc une métadonnée visuelle associée à la hauteur dans le contexte de la voix. Elle ne constitue pas une altération musicale supplémentaire et ne doit jamais être utilisée pour recalculer la hauteur.
 
 ## 8. Portée de la décision
 
