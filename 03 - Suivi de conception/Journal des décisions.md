@@ -172,3 +172,15 @@ Ce journal conserve les décisions de conception confirmées. Les propositions n
 - **Précision :** le dénominateur commun est conservé comme information de division ; 0/3 n'est pas normalisé en 0/1.
 - **Précision :** cette liberté appartient au modèle temporel interne de MireDo. Elle ne crée pas automatiquement une syntaxe Tonic Sol-fa pour les divisions dont les conventions de notation source ne sont pas encore documentées.
 - **Statut :** modèle temporel validé par l'utilisateur ; la syntaxe de notation source pour les divisions non documentées reste ouverte.
+
+## 2026-11-06 — Organisation des informations supplémentaires
+
+- **Décision :** regrouper les indications musicales complémentaires dans une catégorie générale unique intitulée « Informations supplémentaires » dans MireDo.
+- **Décision :** organiser les éléments de cette catégorie en familles fonctionnelles, sans transformer chaque famille en catégorie principale indépendante.
+- **Décision :** reprendre les conventions musicales du solfège et de la notation classique ; MireDo ne redéfinit pas leur signification ni leur comportement musical.
+- **Décision :** prendre les logiciels de notation reconnus comme références pour l'organisation des palettes, la saisie, l'édition, les propriétés, le placement, le rendu et les effets de lecture. MuseScore constitue la référence principale évoquée.
+- **Décision :** pour une indication ponctuelle, l'unité musicale est le niveau de précision maximal de son association dans le modèle MireDo.
+- **Précision :** les indications étendues conservent leur début et leur fin ; les indications de reprise et de navigation conservent leurs repères structurels.
+- **Précision :** les familles concernées comprennent notamment les nuances et évolutions dynamiques, le tempo et ses évolutions, les articulations, les ornements, les notes de grâce, les trémolos, les arpèges et glissandos, les pauses et respirations, les liaisons et lignes musicales, les techniques de jeu, les reprises et repères de navigation, les textes et repères musicaux ainsi que les symboles harmoniques.
+- **Périmètre non fixé :** le catalogue exhaustif, les propriétés de chaque élément, les détails d'interface, le stockage dans le fichier `.mrd`, le placement graphique et les paramètres de lecture/export restent à concevoir à partir des logiciels de référence.
+- **Statut :** principes généraux et organisation validés par l'utilisateur ; détails techniques et inventaire exhaustif non définis.
